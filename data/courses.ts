@@ -12,7 +12,8 @@ export type Course = {
   time: Text;
   place: Text;
   language: Text;
-  price: string;
+  price: Text;
+  endDate?: string;
   status: Text;
   audience: Text[];
   highlights: Text[];
@@ -30,10 +31,11 @@ export const courses: Course[] = [
     time: { zh: "8:00–10:30 AM · 4:00–6:30 PM", en: "8:00–10:30 AM · 4:00–6:30 PM" },
     place: { zh: "Sphere Damansara", en: "Sphere Damansara" },
     language: { zh: "中文 / English", en: "Chinese / English" },
-    price: "RM600",
+    price: { zh: "RM600", en: "RM600" },
     status: { zh: "近期课程", en: "Upcoming" },
     collection: "upcoming",
     featured: true,
+    endDate: "2026-09-27",
     audience: [
       { zh: "想建立规律晨间或日常练习的人", en: "Those wanting a regular morning or daily practice" },
       { zh: "希望同时学习力量、稳定与太阳能量练习的人", en: "Those seeking strength, stability and a sun-based practice" }
@@ -54,10 +56,11 @@ export const courses: Course[] = [
     time: { zh: "8:00–11:30 AM · 4:00–7:30 PM", en: "8:00–11:30 AM · 4:00–7:30 PM" },
     place: { zh: "Sphere Damansara", en: "Sphere Damansara" },
     language: { zh: "中文 / English", en: "Chinese / English" },
-    price: "RM850",
+    price: { zh: "RM850", en: "RM850" },
     status: { zh: "近期课程", en: "Upcoming" },
     collection: "upcoming",
     featured: true,
+    endDate: "2026-10-04",
     audience: [
       { zh: "想系统深入经典哈他瑜伽的人", en: "Those ready to deepen classical Hatha Yoga systematically" },
       { zh: "希望建立稳定独立练习的人", en: "Those wanting a stable independent practice" }
@@ -78,10 +81,11 @@ export const courses: Course[] = [
     time: { zh: "2:00–4:30 PM 或 6:00–8:30 PM", en: "2:00–4:30 PM or 6:00–8:30 PM" },
     place: { zh: "The Mews KLCC", en: "The Mews KLCC" },
     language: { zh: "中文 / English", en: "Chinese / English" },
-    price: "RM850",
+    price: { zh: "RM850", en: "RM850" },
     status: { zh: "近期课程", en: "Upcoming" },
     collection: "upcoming",
     featured: true,
+    endDate: "2026-10-10",
     audience: [
       { zh: "希望学习五大元素净化日常练习的人", en: "Those wanting a daily five-elements purification practice" },
       { zh: "对古典瑜伽与元素观感兴趣的人", en: "Those interested in classical yoga and the elemental approach" }
@@ -102,10 +106,11 @@ export const courses: Course[] = [
     time: { zh: "5天完整课程", en: "Five-day programme" },
     place: { zh: "Kuala Lumpur / Petaling Jaya", en: "Kuala Lumpur / Petaling Jaya" },
     language: { zh: "中文指导", en: "Chinese guidance" },
-    price: "RM4,500 / RMB7,800",
+    price: { zh: "RM4,500 / RMB7,800", en: "RM4,500 / RMB7,800" },
     status: { zh: "少量名额", en: "Limited places" },
     collection: "upcoming",
     featured: true,
+    endDate: "2026-10-16",
     audience: [
       { zh: "希望深化古典瑜伽练习与日常养护的人", en: "Practitioners ready to deepen yoga and daily self-care" },
       { zh: "希望在医生与老师支持下观察身体状态的人", en: "Those wanting structured support from doctors and teachers" }
@@ -123,12 +128,12 @@ export const courses: Course[] = [
     title: { zh: "初学者体验课", en: "Beginner Experience Class" },
     type: { zh: "入门课程", en: "Beginner programme" },
     summary: { zh: "适合第一次接触 Yoga Sri 的学员，以轻量方式认识经典哈他瑜伽、身体使用与练习节奏。", en: "A gentle first step into Yoga Sri’s approach to classical Hatha Yoga, body use and practice rhythm." },
-    date: { zh: "2026年10月17日起固定开放", en: "Rolling enrolment from 17 October 2026" },
-    time: { zh: "依当月排期", en: "Monthly schedule" },
+    date: { zh: "登记兴趣 · 新一期公布中", en: "Register interest · next intake to be announced" },
+    time: { zh: "排期确认后通知", en: "Schedule shared when confirmed" },
     place: { zh: "Kuala Lumpur / Petaling Jaya", en: "Kuala Lumpur / Petaling Jaya" },
     language: { zh: "中文 / English / 粤语", en: "Chinese / English / Cantonese" },
-    price: "RM80",
-    status: { zh: "长期开放", en: "Rolling enrolment" },
+    price: { zh: "RM80", en: "RM80" },
+    status: { zh: "登记兴趣", en: "Register interest" },
     collection: "hatha",
     audience: [
       { zh: "没有瑜伽经验，想先体验的人", en: "Complete beginners who want to try a first class" },
@@ -145,12 +150,12 @@ export const courses: Course[] = [
     title: { zh: "Surya Shakti｜太阳力量", en: "Surya Shakti" },
     type: { zh: "经典哈他瑜伽", en: "Classical Hatha Yoga" },
     summary: { zh: "一套以身体力量、稳定与活力为重点的经典练习，适合希望建立规律身体训练的人。", en: "A classical practice focused on strength, stability and vitality for a regular physical routine." },
-    date: { zh: "固定招生", en: "Rolling enrolment" },
-    time: { zh: "依当月排期", en: "Monthly schedule" },
+    date: { zh: "登记兴趣 · 新一期公布中", en: "Register interest · next intake to be announced" },
+    time: { zh: "排期确认后通知", en: "Schedule shared when confirmed" },
     place: { zh: "Kuala Lumpur / Petaling Jaya", en: "Kuala Lumpur / Petaling Jaya" },
     language: { zh: "中文 / English / 粤语", en: "Chinese / English / Cantonese" },
-    price: "RM350",
-    status: { zh: "长期开放", en: "Rolling enrolment" },
+    price: { zh: "RM350", en: "RM350" },
+    status: { zh: "登记兴趣", en: "Register interest" },
     collection: "hatha",
     audience: [
       { zh: "希望提升身体力量与稳定度的人", en: "Those wanting more physical strength and stability" },
@@ -166,12 +171,12 @@ export const courses: Course[] = [
     title: { zh: "Surya Kriya｜太阳克里亚", en: "Surya Kriya" },
     type: { zh: "经典哈他瑜伽", en: "Classical Hatha Yoga" },
     summary: { zh: "一套传统太阳练习，以精确、稳定与规律为核心，适合希望长期建立经典个人练习的人。", en: "A traditional sun-based practice centred on precision, stability and consistent personal practice." },
-    date: { zh: "固定招生", en: "Rolling enrolment" },
-    time: { zh: "依当月排期", en: "Monthly schedule" },
+    date: { zh: "登记兴趣 · 新一期公布中", en: "Register interest · next intake to be announced" },
+    time: { zh: "排期确认后通知", en: "Schedule shared when confirmed" },
     place: { zh: "Kuala Lumpur / Petaling Jaya", en: "Kuala Lumpur / Petaling Jaya" },
     language: { zh: "中文 / English / 粤语", en: "Chinese / English / Cantonese" },
-    price: "RM450",
-    status: { zh: "长期开放", en: "Rolling enrolment" },
+    price: { zh: "RM450", en: "RM450" },
+    status: { zh: "登记兴趣", en: "Register interest" },
     collection: "hatha",
     audience: [
       { zh: "希望学习传统太阳练习的人", en: "Those wanting to learn a traditional sun practice" },
@@ -187,12 +192,12 @@ export const courses: Course[] = [
     title: { zh: "Angamardana｜身体掌控练习", en: "Angamardana" },
     type: { zh: "经典哈他瑜伽", en: "Classical Hatha Yoga" },
     summary: { zh: "以身体重量进行的系统性练习，可按站、蹲、坐、躺分段学习，也可完整学习全套。", en: "A systematic body-weight practice available by standing, squatting, seated and lying modules, or as a complete programme." },
-    date: { zh: "固定招生", en: "Rolling enrolment" },
-    time: { zh: "依当月排期", en: "Monthly schedule" },
+    date: { zh: "登记兴趣 · 新一期公布中", en: "Register interest · next intake to be announced" },
+    time: { zh: "排期确认后通知", en: "Schedule shared when confirmed" },
     place: { zh: "Kuala Lumpur / Petaling Jaya", en: "Kuala Lumpur / Petaling Jaya" },
     language: { zh: "中文 / English / 粤语", en: "Chinese / English / Cantonese" },
-    price: "RM180 / 单段 · RM650 / 全套",
-    status: { zh: "长期开放", en: "Rolling enrolment" },
+    price: { zh: "RM180 / 单段 · RM650 / 全套", en: "RM180 / module · RM650 / complete set" },
+    status: { zh: "登记兴趣", en: "Register interest" },
     collection: "hatha",
     audience: [
       { zh: "想提升力量、灵活与身体控制的人", en: "Those wanting strength, mobility and body control" },
@@ -208,12 +213,12 @@ export const courses: Course[] = [
     title: { zh: "元素净化：古典瑜伽与阿育吠陀概论", en: "Elements: Classical Yoga & Ayurveda" },
     type: { zh: "7天线上课程", en: "7-day online course" },
     summary: { zh: "从五大元素、Dosha、Agni、Ama、Ojas、Dinacharya 到 Panchakarma，建立古典瑜伽与阿育吠陀的基础地图。", en: "A seven-day foundation covering the five elements, Doshas, Agni, Ama, Ojas, Dinacharya and Panchakarma." },
-    date: { zh: "固定开班 · 下一期公布中", en: "Recurring intake · next dates to be announced" },
-    time: { zh: "线上晚间课程", en: "Evening online sessions" },
+    date: { zh: "登记兴趣 · 下一期公布中", en: "Register interest · next intake to be announced" },
+    time: { zh: "排期确认后通知", en: "Schedule shared when confirmed" },
     place: { zh: "Online", en: "Online" },
     language: { zh: "中文", en: "Chinese" },
-    price: "RM350",
-    status: { zh: "长期开放", en: "Recurring" },
+    price: { zh: "RM350", en: "RM350" },
+    status: { zh: "登记兴趣", en: "Register interest" },
     collection: "hatha",
     audience: [
       { zh: "第一次系统接触瑜伽与阿育吠陀的人", en: "Those new to a structured yoga and Ayurveda foundation" },
@@ -235,7 +240,7 @@ export const courses: Course[] = [
     time: { zh: "依预约安排", en: "By appointment" },
     place: { zh: "Petaling Jaya", en: "Petaling Jaya" },
     language: { zh: "中文协助 / English", en: "English with Chinese support" },
-    price: "RM180 起",
+    price: { zh: "RM180 起", en: "From RM180" },
     status: { zh: "预约开放", en: "Appointments open" },
     collection: "ayurveda",
     audience: [
@@ -252,12 +257,12 @@ export const courses: Course[] = [
     title: { zh: "一日重启｜One-Day Reset", en: "One-Day Reset" },
     type: { zh: "瑜伽 × 阿育吠陀", en: "Yoga × Ayurveda" },
     summary: { zh: "用一天时间重新整理身体与生活节奏，结合适合当下状态的瑜伽、阿育吠陀养护与日常建议。", en: "A one-day reset combining appropriate yoga, Ayurvedic care and practical daily-rhythm guidance." },
-    date: { zh: "预约制", en: "By appointment" },
+    date: { zh: "方案设计中 · 欢迎预先咨询", en: "Package details in development · enquiries welcome" },
     time: { zh: "一日方案", en: "One-day programme" },
     place: { zh: "Petaling Jaya / Kuala Lumpur", en: "Petaling Jaya / Kuala Lumpur" },
     language: { zh: "中文协助 / English", en: "English with Chinese support" },
-    price: "预约咨询",
-    status: { zh: "预约开放", en: "Appointments open" },
+    price: { zh: "确认内容与报价后预约", en: "Scope and quote confirmed before booking" },
+    status: { zh: "询问开放", en: "Enquiries open" },
     collection: "ayurveda",
     audience: [
       { zh: "想先用一天体验整合式养护的人", en: "Those wanting a one-day introduction to integrated care" },
@@ -273,12 +278,12 @@ export const courses: Course[] = [
     title: { zh: "基础重启｜Foundation Reset", en: "Foundation Reset" },
     type: { zh: "瑜伽 × 阿育吠陀", en: "Yoga × Ayurveda" },
     summary: { zh: "比一日方案更完整地梳理饮食、作息、练习与养护节奏，为后续稳定生活方式建立基础。", en: "A deeper reset covering food, routine, practice and care to build a more sustainable foundation." },
-    date: { zh: "预约制", en: "By appointment" },
+    date: { zh: "方案设计中 · 欢迎预先咨询", en: "Package details in development · enquiries welcome" },
     time: { zh: "依个人方案", en: "Personalised schedule" },
     place: { zh: "Petaling Jaya / Kuala Lumpur", en: "Petaling Jaya / Kuala Lumpur" },
     language: { zh: "中文协助 / English", en: "English with Chinese support" },
-    price: "预约咨询",
-    status: { zh: "预约开放", en: "Appointments open" },
+    price: { zh: "确认内容与报价后预约", en: "Scope and quote confirmed before booking" },
+    status: { zh: "询问开放", en: "Enquiries open" },
     collection: "ayurveda",
     audience: [
       { zh: "希望建立更规律生活方式的人", en: "Those wanting a more consistent daily rhythm" },
@@ -294,12 +299,12 @@ export const courses: Course[] = [
     title: { zh: "深度重启｜Deep Reset", en: "Deep Reset" },
     type: { zh: "瑜伽 × 阿育吠陀深度方案", en: "Yoga × Ayurveda immersion" },
     summary: { zh: "适合希望投入更完整时间，以连续支持重新建立练习、作息与阿育吠陀养护节奏的人。", en: "For those ready to invest more time in rebuilding practice, routine and Ayurvedic care with ongoing support." },
-    date: { zh: "预约制", en: "By appointment" },
+    date: { zh: "方案设计中 · 欢迎预先咨询", en: "Package details in development · enquiries welcome" },
     time: { zh: "依个人方案", en: "Personalised schedule" },
     place: { zh: "Petaling Jaya / Kuala Lumpur", en: "Petaling Jaya / Kuala Lumpur" },
     language: { zh: "中文协助 / English", en: "English with Chinese support" },
-    price: "预约咨询",
-    status: { zh: "预约开放", en: "Appointments open" },
+    price: { zh: "确认内容与报价后预约", en: "Scope and quote confirmed before booking" },
+    status: { zh: "询问开放", en: "Enquiries open" },
     collection: "ayurveda",
     audience: [
       { zh: "希望进行较完整生活方式重整的人", en: "Those seeking a more comprehensive lifestyle reset" },
@@ -319,7 +324,7 @@ export const courses: Course[] = [
     time: { zh: "60或90分钟", en: "60 or 90 minutes" },
     place: { zh: "Kuala Lumpur / Petaling Jaya", en: "Kuala Lumpur / Petaling Jaya" },
     language: { zh: "中文 / English / 粤语", en: "Chinese / English / Cantonese" },
-    price: "RM180 / 60min · RM250 / 90min",
+    price: { zh: "RM180 / 60分钟 · RM250 / 90分钟", en: "RM180 / 60 min · RM250 / 90 min" },
     status: { zh: "预约开放", en: "Appointments open" },
     collection: "services",
     audience: [
@@ -340,7 +345,7 @@ export const courses: Course[] = [
     time: { zh: "弹性安排", en: "Flexible" },
     place: { zh: "马来西亚 / 线上", en: "Malaysia / Online" },
     language: { zh: "中文 / English / 粤语", en: "Chinese / English / Cantonese" },
-    price: "洽谈",
+    price: { zh: "洽谈", en: "Custom quotation" },
     status: { zh: "合作开放", en: "Enquiries open" },
     collection: "services",
     audience: [
@@ -355,6 +360,27 @@ export const courses: Course[] = [
 ];
 
 export const getCourse = (slug: string) => courses.find((course) => course.slug === slug);
-export const featuredCourses = courses.filter((course) => course.featured);
-export const coursesByCollection = (collection: CourseCollection) =>
-  courses.filter((course) => course.collection === collection);
+const malaysiaDateKey = (date = new Date()) => {
+  const parts = new Intl.DateTimeFormat("en-GB", {
+    timeZone: "Asia/Kuala_Lumpur",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+  }).formatToParts(date);
+  const part = (type: Intl.DateTimeFormatPartTypes) =>
+    parts.find((item) => item.type === type)?.value ?? "";
+  return `${part("year")}-${part("month")}-${part("day")}`;
+};
+
+export const isCurrentCourse = (course: Course, date = new Date()) =>
+  !course.endDate || course.endDate >= malaysiaDateKey(date);
+
+export const currentFeaturedCourses = (date = new Date()) =>
+  courses.filter((course) => course.featured && isCurrentCourse(course, date));
+
+export const coursesByCollection = (collection: CourseCollection, date = new Date()) =>
+  courses.filter(
+    (course) =>
+      course.collection === collection &&
+      (collection !== "upcoming" || isCurrentCourse(course, date)),
+  );
