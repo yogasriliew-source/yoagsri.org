@@ -36,9 +36,10 @@ export function Home() {
                   </a>
                 </div>
               </div>
-              <div className="art">
-                <span />
-                <b>From Ayur Roots<br />to Yogic Bloom</b>
+              <div className="hero-photo">
+                <img src="/images/yoga-sri-garden.jpeg" width={1613} height={1015}
+                  alt={zh ? "Yoga Sri 在庭园中静坐练习" : "Yoga Sri seated in practice in a garden"}
+                  loading="eager" />
               </div>
             </section>
 
@@ -82,9 +83,10 @@ export function Home() {
             </section>
 
             <section id="about" className="about">
-              <div className="portrait">
-                <b>YOGA SRI</b>
-                <small>Malaysia · China · Taiwan · Japan · India</small>
+              <div className="teacher-photo">
+                <img src="/images/yoga-sri-portrait.jpeg" width={1152} height={1536}
+                  alt={zh ? "Yoga Sri 微笑肖像" : "Smiling portrait of Yoga Sri"}
+                  loading="lazy" />
               </div>
               <div>
                 <p className="eyebrow">ABOUT YOGA SRI</p>
