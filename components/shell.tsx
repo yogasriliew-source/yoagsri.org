@@ -1,11 +1,22 @@
 "use client";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import type { Lang } from "@/data/courses";
 
 export function Shell({ children }: { children: (lang: Lang) => React.ReactNode }) {
   const [lang, setLang] = useState<Lang>("zh");
+
+  useEffect(() => {
+    const saved = window.localStorage.getItem("yoga-sri-language");
+    if (saved === "zh" || saved === "en") setLang(saved);
+  }, []);
+
   const zh = lang === "zh";
+  const toggleLanguage = () => {
+    const next = zh ? "en" : "zh";
+    window.localStorage.setItem("yoga-sri-language", next);
+    setLang(next);
+  };
   return (
     <>
       <header>
@@ -16,7 +27,7 @@ export function Shell({ children }: { children: (lang: Lang) => React.ReactNode 
         <nav>
           <Link href="/courses">{zh ? "课程与方案" : "Programmes"}</Link>
           <Link href="/#about">{zh ? "关于" : "About"}</Link>
-          <button onClick={() => setLang(zh ? "en" : "zh")}>{zh ? "EN" : "中文"}</button>
+          <button onClick={toggleLanguage} aria-label={zh ? "Switch to English" : "切换至中文"}>{zh ? "EN" : "中文"}</button>
           <a className="btn small" href="https://wa.me/60126725549" target="_blank">WhatsApp</a>
         </nav>
       </header>
