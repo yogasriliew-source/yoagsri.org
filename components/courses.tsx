@@ -25,6 +25,7 @@ export function Courses() {
 
             {sections.map((section) => {
               const items = coursesByCollection(section.key);
+              if (items.length === 0) return null;
               return (
                 <section className="section" key={section.key} id={section.key}>
                   <div className="heading">
