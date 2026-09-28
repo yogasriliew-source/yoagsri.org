@@ -2,9 +2,10 @@
 import Link from "next/link";
 import { Shell } from "./shell";
 import { CourseCard } from "./course-card";
-import { featuredCourses } from "@/data/courses";
+import { currentFeaturedCourses } from "@/data/courses";
 
 export function Home() {
+  const featuredCourses = currentFeaturedCourses();
   return (
     <Shell>
       {(lang) => {
