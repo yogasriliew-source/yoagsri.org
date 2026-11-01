@@ -188,6 +188,48 @@ export const courses: Course[] = [
     ]
   },
   {
+    slug: "yogasanas",
+    title: { zh: "Yogasanas｜经典瑜伽体式", en: "Yogasanas" },
+    type: { zh: "经典哈他瑜伽", en: "Classical Hatha Yoga" },
+    summary: { zh: "系统学习传统瑜伽体式练习，深化稳定、专注和身体觉察。", en: "A structured classical asana programme supporting stability, focus and refined body awareness." },
+    date: { zh: "登记兴趣 · 新一期公布中", en: "Register interest · next intake to be announced" },
+    time: { zh: "排期确认后通知", en: "Schedule shared when confirmed" },
+    place: { zh: "Kuala Lumpur / Petaling Jaya", en: "Kuala Lumpur / Petaling Jaya" },
+    language: { zh: "中文 / English / 粤语", en: "Chinese / English / Cantonese" },
+    price: { zh: "RM850", en: "RM850" },
+    status: { zh: "登记兴趣", en: "Register interest" },
+    collection: "hatha",
+    audience: [
+      { zh: "希望系统学习经典哈他瑜伽的人", en: "Those looking for a structured classical Hatha Yoga programme" },
+      { zh: "想建立规律独立练习的人", en: "Those establishing a consistent personal practice" }
+    ],
+    highlights: [
+      { zh: "完整 Yogasanas 教学", en: "Complete Yogasanas instruction" },
+      { zh: "练习条件与细节指导", en: "Practice conditions and detailed guidance" }
+    ]
+  },
+  {
+    slug: "bhuta-shuddhi",
+    title: { zh: "Bhuta Shuddhi｜五大元素净化", en: "Bhuta Shuddhi" },
+    type: { zh: "经典哈他瑜伽 · 元素净化", en: "Classical Hatha Yoga · Five Elements" },
+    summary: { zh: "学习传统五大元素净化练习，费用包含练习器具，可独立持续练习。", en: "Learn the traditional five-elements purification process with the practice kit included." },
+    date: { zh: "登记兴趣 · 新一期公布中", en: "Register interest · next intake to be announced" },
+    time: { zh: "排期确认后通知", en: "Schedule shared when confirmed" },
+    place: { zh: "Kuala Lumpur / Petaling Jaya", en: "Kuala Lumpur / Petaling Jaya" },
+    language: { zh: "中文 / English / 粤语", en: "Chinese / English / Cantonese" },
+    price: { zh: "RM850（包含练习器具）", en: "RM850 (practice kit included)" },
+    status: { zh: "登记兴趣", en: "Register interest" },
+    collection: "hatha",
+    audience: [
+      { zh: "想学习五大元素净化日常练习的人", en: "Those interested in a daily five-elements practice" },
+      { zh: "对古典瑜伽与元素净化感兴趣的人", en: "Those exploring classical yoga and elemental purification" }
+    ],
+    highlights: [
+      { zh: "Bhuta Shuddhi 完整教学", en: "Complete Bhuta Shuddhi instruction" },
+      { zh: "费用包含练习器具", en: "Practice kit included" }
+    ]
+  },
+  {
     slug: "angamardana",
     title: { zh: "Angamardana｜身体掌控练习", en: "Angamardana" },
     type: { zh: "经典哈他瑜伽", en: "Classical Hatha Yoga" },
@@ -236,12 +278,12 @@ export const courses: Course[] = [
     title: { zh: "Nadi Balance Scan｜脉象平衡扫描", en: "Nadi Balance Scan" },
     type: { zh: "阿育吠陀评估", en: "Ayurveda assessment" },
     summary: { zh: "以脉象评估为起点，结合生活节奏、饮食与练习需求，帮助你更有结构地理解当下状态。", en: "An Ayurveda-based pulse assessment used as a starting point to understand your present state, rhythm, food and practice needs." },
-    date: { zh: "预约制", en: "By appointment" },
-    time: { zh: "依预约安排", en: "By appointment" },
-    place: { zh: "Petaling Jaya", en: "Petaling Jaya" },
+    date: { zh: "咨询后确认档期", en: "Dates confirmed upon enquiry" },
+    time: { zh: "依医师档期安排", en: "Subject to physician availability" },
+    place: { zh: "Petaling Jaya（地点待确认）", en: "Petaling Jaya (venue to be confirmed)" },
     language: { zh: "中文协助 / English", en: "English with Chinese support" },
-    price: { zh: "RM180 起", en: "From RM180" },
-    status: { zh: "预约开放", en: "Appointments open" },
+    price: { zh: "价格与医师咨询内容请先确认", en: "Confirm fee and physician consultation details" },
+    status: { zh: "预约咨询", en: "Enquire for availability" },
     collection: "ayurveda",
     audience: [
       { zh: "想从阿育吠陀角度了解个人状态的人", en: "Those wanting an Ayurvedic view of their current state" },
@@ -384,3 +426,7 @@ export const coursesByCollection = (collection: CourseCollection, date = new Dat
       course.collection === collection &&
       (collection !== "upcoming" || isCurrentCourse(course, date)),
   );
+
+/** Evergreen introductory programmes shown when no future dated intake is confirmed. */
+export const starterCourses = () =>
+  courses.filter((course) => ["beginner-experience", "surya-shakti", "elements-yoga-ayurveda-online"].includes(course.slug));
