@@ -11,6 +11,10 @@ export function Shell({ children }: { children: (lang: Lang) => React.ReactNode 
     if (saved === "zh" || saved === "en") setLang(saved);
   }, []);
 
+  useEffect(() => {
+    document.documentElement.lang = lang === "zh" ? "zh-Hans" : "en";
+  }, [lang]);
+
   const zh = lang === "zh";
   const toggleLanguage = () => {
     const next = zh ? "en" : "zh";
