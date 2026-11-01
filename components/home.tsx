@@ -2,10 +2,12 @@
 import Link from "next/link";
 import { Shell } from "./shell";
 import { CourseCard } from "./course-card";
-import { currentFeaturedCourses } from "@/data/courses";
+import { currentFeaturedCourses, starterCourses } from "@/data/courses";
 
 export function Home() {
   const featuredCourses = currentFeaturedCourses();
+  const hasDatedCourses = featuredCourses.length > 0;
+  const displayedCourses = hasDatedCourses ? featuredCourses : starterCourses();
   return (
     <Shell>
       {(lang) => {
@@ -46,15 +48,18 @@ export function Home() {
             <section className="section">
               <div className="heading">
                 <div>
-                  <p className="eyebrow">UPCOMING · SEP–OCT 2026</p>
-                  <h2>{zh ? "近期课程" : "Upcoming programmes"}</h2>
+                  <p className="eyebrow">{hasDatedCourses ? "UPCOMING · MALAYSIA" : "START HERE · MALAYSIA"}</p>
+                  <h2>{hasDatedCourses ? (zh ? "近期课程" : "Upcoming programmes") : (zh ? "从这里开始你的练习" : "Start your practice here")}</h2>
                 </div>
                 <Link className="link" href="/courses">
                   {zh ? "查看全部 →" : "View all →"}
                 </Link>
               </div>
+              {!hasDatedCourses && (
+                <p className="section-intro">{zh ? "新一期实体课程日期确认后会在这里公布。你可以先浏览常态课程，或登记兴趣，让我们通知你下一期。" : "New in-person dates will appear here when confirmed. Browse our regular programmes or register interest for the next intake."}</p>
+              )}
               <div className="grid">
-                {featuredCourses.map((course) => (
+                {displayedCourses.map((course) => (
                   <CourseCard key={course.slug} course={course} lang={lang} />
                 ))}
               </div>
