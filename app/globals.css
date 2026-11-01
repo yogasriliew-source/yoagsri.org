@@ -7,3 +7,11 @@
 .teacher-photo{width:100%;max-width:480px;margin-inline:auto}
 .teacher-photo img{display:block;width:100%;height:auto}
 @media(min-width:901px){.hero{grid-template-columns:1fr 1.15fr;gap:4vw}}
+
+/* Phase 1 launch QA: accessible mobile discovery and empty-state layout. */
+.section-intro{max-width:760px;margin:-12px 0 30px;color:#58685f;line-height:1.8}
+.empty-state{max-width:780px;padding:30px;border:1px solid var(--line);background:#fff}
+.empty-state p{line-height:1.75;color:#58685f;margin:0 0 20px}
+a:focus-visible,button:focus-visible{outline:3px solid var(--sun);outline-offset:4px}
+@media(max-width:900px){header nav{gap:14px}header nav>a[href="/courses"]:not(.btn){display:inline}}
+@media(max-width:560px){header nav{gap:12px}header nav>.btn{display:none}.brand{letter-spacing:.12em}nav{font-size:13px}}
