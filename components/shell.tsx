@@ -28,7 +28,7 @@ export function Shell({ children }: { children: (lang: Lang) => React.ReactNode 
           <Link href="/courses">{zh ? "课程与方案" : "Programmes"}</Link>
           <Link href="/#about">{zh ? "关于" : "About"}</Link>
           <button onClick={toggleLanguage} aria-label={zh ? "Switch to English" : "切换至中文"}>{zh ? "EN" : "中文"}</button>
-          <a className="btn small" href="https://wa.me/60126725549" target="_blank">WhatsApp</a>
+          <a className="btn small" href="https://wa.me/60126725549" target="_blank" rel="noopener noreferrer">WhatsApp</a>
         </nav>
       </header>
       <main>{children(lang)}</main>
