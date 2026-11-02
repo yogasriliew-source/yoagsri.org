@@ -64,9 +64,9 @@ These are **original contemporary interpretations**, not claims of authentic rit
 | Surya Shakti + Kriya | Dual solar circles | Two complementary practices |
 | Yogasanas | Balanced interwoven diamonds | Stability & alignment |
 | Angamardana | Mirrored movement loops | Strength & agility |
-| Bhuta Shuddhi | Five connected loops | Five elements |
-| Seven-day online Elements | Five connected loops | Study of the elements |
-| Five Elements Retreat | Five connected loops | Integration and immersion |
+| Bhuta Shuddhi | Central diamond with inner purification form | Five-element purification |
+| Seven-day online Elements | Five surrounding loop motifs and a central study circle | Learning the five elements |
+| Five Elements Retreat | Enclosing circle around five interlinked petals | Integration and immersion |
 | Nadi Balance Scan | Two pulse-like waves and a dot | Observation and rhythm |
 | One-Day Reset | Sunrise arch | New beginnings |
 | Foundation Reset | Nested stable diamonds | Building foundations |
