@@ -44,3 +44,41 @@ These tokens are applied as CSS custom properties in `app/globals.css`.
 
 ## Status
 Visual refinements are on draft PR #4 (branch `upgrade-malaysia-courses`), not `main`. Check Vercel preview and real desktop/mobile screenshots before approving production release.
+
+
+## Five-element Kolam symbol family (2 Nov 2026)
+These are **original contemporary interpretations**, not claims of authentic ritual kolam patterns or of traditional fixed symbols for each element. Refer to `components/kolam-mark.tsx` for the reusable inline SVG source.
+
+- Earth (Prithvi): nested diamond geometry and four enclosing loops → stability
+- Water (Jala): three softly woven wave paths → flow
+- Fire (Agni): upward enclosing arc and a small inner flame/triangle → transformation
+- Air (Vayu): four rotational curls → movement
+- Space (Akasha): a circle with four open teardrop paths → openness
+
+## Course-specific symbol vocabulary
+| Course/offer | Motif | Rationale |
+|---|---|---|
+| Beginner Experience | Four petal welcome | A welcoming beginning |
+| Surya Shakti | Eight sun petals | Strength & radiance |
+| Surya Kriya | Interlaced solar orbits | Precision & rhythm |
+| Surya Shakti + Kriya | Dual solar circles | Two complementary practices |
+| Yogasanas | Balanced interwoven diamonds | Stability & alignment |
+| Angamardana | Mirrored movement loops | Strength & agility |
+| Bhuta Shuddhi | Five connected loops | Five elements |
+| Seven-day online Elements | Five connected loops | Study of the elements |
+| Five Elements Retreat | Five connected loops | Integration and immersion |
+| Nadi Balance Scan | Two pulse-like waves and a dot | Observation and rhythm |
+| One-Day Reset | Sunrise arch | New beginnings |
+| Foundation Reset | Nested stable diamonds | Building foundations |
+| Deep Reset | Inward-to-outward spiral | Continuous deepening |
+| Private Teaching | Four balanced conversational loops | One-to-one attention |
+| Corporate Yoga | Connected four-direction grid | Shared practice |
+
+All marks use the same small dot placement, stroke weight, antique-ochre palette, open whitespace and accessible accompanying text. Symbols are decorative and are never the sole way of identifying a programme.
+
+## Production use
+- `<FiveElements lang={lang} />` shows five marks on the homepage.
+- `<CourseCard />` chooses each mark from `markForCourse(slug)`.
+- `<CourseDetail />` reuses the same mark.
+- `<KolamDivider />` replaces the botanical section divider.
+- Original photographs remain used for real Hatha Yoga postures.
