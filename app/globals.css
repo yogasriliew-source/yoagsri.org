@@ -343,3 +343,30 @@ footer b{color:var(--green);font-family:"Cormorant Garamond",Georgia,serif;font-
   .kolam-course-card .course-symbol{height:71px}
   .kolam-course-card .course-symbol .kolam-mark{width:72px;height:72px}
 }
+
+
+/* Final approved Library asset overrides: no generated substitute motifs. */
+.site-icon{display:block;object-fit:contain;flex-shrink:0}
+.kolam-divider>.site-icon{width:42px;height:42px}
+.hero-kolam-corner>.site-icon{width:100%;height:100%}
+.kolam-course-card .course-symbol>.site-icon{width:86px;height:86px}
+.detail-symbol>.site-icon{width:100%;height:auto;aspect-ratio:1}
+.hero::after{
+  content:"";width:36px;height:36px;top:10px;right:23px;
+  background:var(--paper) url("/icons/finial.svg") center/contain no-repeat;
+  padding:0;
+}
+.hero-photo::before,.teacher-photo::before{
+  background:url("/icons/corner.svg") center/contain no-repeat;
+  width:45px;height:45px;top:-18px;left:-18px;
+  border:0;
+}
+.hero-photo::after,.teacher-photo::after{
+  background:url("/icons/corner.svg") center/contain no-repeat;
+  width:45px;height:45px;bottom:-18px;right:-18px;
+  transform:rotate(180deg);
+  border:0;
+}
+@media(max-width:560px){
+  .kolam-course-card .course-symbol>.site-icon{width:72px;height:72px}
+}
