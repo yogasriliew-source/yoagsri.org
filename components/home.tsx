@@ -4,7 +4,7 @@ import { Shell } from "./shell";
 import { CourseCard } from "./course-card";
 import { KolamDivider } from "./kolam-divider";
 import { FiveElements } from "./five-elements";
-import { KolamMark } from "./kolam-mark";
+import { SiteIcon } from "./site-icon";
 import { currentFeaturedCourses, starterCourses } from "@/data/courses";
 
 export function Home() {
@@ -43,7 +43,7 @@ export function Home() {
                 </div>
               </div>
               <div className="hero-photo">
-                <div className="hero-kolam-corner" aria-hidden="true"><KolamMark kind="space" size={86}/></div>
+                <div className="hero-kolam-corner" aria-hidden="true"><SiteIcon name="finial" size={86}/></div>
                 <img src="/images/yoga-sri-garden.jpeg" width={1613} height={1015}
                   alt={zh ? "Yoga Sri 在庭园中静坐练习" : "Yoga Sri seated in practice in a garden"}
                   loading="eager" />
