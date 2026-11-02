@@ -82,3 +82,18 @@ All marks use the same small dot placement, stroke weight, antique-ochre palette
 - `<CourseDetail />` reuses the same mark.
 - `<KolamDivider />` replaces the botanical section divider.
 - Original photographs remain used for real Hatha Yoga postures.
+
+
+## SOURCE OF TRUTH — approved asset folder (3 Nov 2026)
+
+Library: `/YogaSri-Website-Icons` (shared by owner)
+- 34 approved SVGs are copied **without redrawing** into `public/icons/*.svg`.
+- These override earlier algorithmically generated variants in `components/kolam-mark.tsx`. Leave the older experimental module unused; do not reuse without approval.
+- The actual site uses `components/site-icon.tsx` to render them, and `components/kolam-divider.tsx` to use the approved `divider.svg`.
+- Five elemental illustrations use `earth.svg`, `water.svg`, `fire.svg`, `air.svg`, `space.svg`.
+- Service cards use `online.svg`, `nadi.svg`, `one.svg`, `foundation.svg`, `deep.svg`, `retreat.svg`, `private.svg`, `corp.svg` as appropriate.
+- Decorative framing uses `corner.svg` and `finial.svg` instead of substitute shapes.
+- The folder includes a single category-level `classical-hatha-yoga.svg`; therefore all Hatha offerings temporarily share that approved mark. Surya Shakti / Surya Kriya / Yogasanas / Angamardana / Bhuta Shuddhi still require separately approved programme-specific glyph files before we replace this category fallback.
+- Keep approved SVGs unchanged in version control. Changes to an icon should be reviewed as intentional asset revisions rather than automatic generation.
+
+This fixes the mismatch between a static image mock and the live website by making the artwork a single maintained asset source.
