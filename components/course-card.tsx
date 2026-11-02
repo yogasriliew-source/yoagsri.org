@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { Course, Lang } from "@/data/courses";
-import { KolamMark, markForCourse } from "./kolam-mark";
+import { SiteIcon, iconForCourse } from "./site-icon";
 
 export function CourseCard({ course: c, lang }: { course: Course; lang: Lang }) {
   const zh = lang === "zh";
@@ -10,7 +10,7 @@ export function CourseCard({ course: c, lang }: { course: Course; lang: Lang }) 
       <i>{c.status[lang]}</i>
     </div>
     <div className="course-symbol">
-      <KolamMark kind={markForCourse(c.slug)} size={86} />
+      <SiteIcon name={iconForCourse(c.slug)} size={86} />
       <span className="course-symbol-rule" />
     </div>
     <h3>{c.title[lang]}</h3>
