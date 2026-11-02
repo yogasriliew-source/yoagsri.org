@@ -6,19 +6,19 @@
 export type ElementKind = "earth" | "water" | "fire" | "air" | "space";
 export type MarkKind =
   | ElementKind | "beginner" | "sun-strength" | "sun-kriya" | "sun-duo"
-  | "posture" | "movement" | "five-elements" | "retreat" | "nadi"
+  | "posture" | "movement" | "five-elements" | "bhuta" | "elements-learning" | "retreat" | "nadi"
   | "one-day" | "foundation" | "deep" | "private" | "corporate";
 
 export function markForCourse(slug: string): MarkKind {
   if (slug.includes("surya-shakti-surya-kriya")) return "sun-duo";
   if (slug.includes("yogasanas")) return "posture";
-  if (slug.includes("bhuta-shuddhi")) return "five-elements";
+  if (slug.includes("bhuta-shuddhi")) return "bhuta";
   if (slug.includes("five-elements-retreat")) return "retreat";
   if (slug.includes("beginner")) return "beginner";
   if (slug.includes("surya-shakti")) return "sun-strength";
   if (slug.includes("surya-kriya")) return "sun-kriya";
   if (slug.includes("angamardana")) return "movement";
-  if (slug.includes("elements-yoga-ayurveda")) return "five-elements";
+  if (slug.includes("elements-yoga-ayurveda")) return "elements-learning";
   if (slug.includes("nadi-balance")) return "nadi";
   if (slug.includes("one-day")) return "one-day";
   if (slug.includes("foundation")) return "foundation";
@@ -102,7 +102,6 @@ function Drawing({ kind }: { kind: MarkKind }) {
         <path d="M18 60C29 76 43 77 60 60C77 43 91 44 102 60"/>
       </>;
     case "five-elements":
-    case "retreat":
       return <>
         <path d="M60 17C50 28 50 38 60 44C70 38 70 28 60 17Z"/>
         <path d="M103 53C90 48 81 54 80 66C91 72 100 65 103 53Z"/>
@@ -111,6 +110,34 @@ function Drawing({ kind }: { kind: MarkKind }) {
         <path d="M17 53C20 65 29 72 40 66C39 54 30 48 17 53Z"/>
         <circle cx="60" cy="65" r="13"/>
         <path d="M60 44V52M72 61L80 66M67 76L71 86M53 76L49 86M48 61L40 66"/>
+      </>;
+    case "bhuta":
+      return <>
+        <circle cx="60" cy="60" r="32"/>
+        <path d="M60 30L90 60L60 90L30 60Z"/>
+        <path d="M60 42C51 51 51 69 60 78C69 69 69 51 60 42Z"/>
+        <circle cx="60" cy="60" r="4"/>
+      </>;
+    case "elements-learning":
+      return <>
+        <circle cx="60" cy="60" r="28"/>
+        <path d="M60 14C49 25 49 33 60 40C71 33 71 25 60 14Z"/>
+        <path d="M104 53C90 48 81 55 80 66C92 72 101 65 104 53Z"/>
+        <path d="M87 102C88 89 78 82 67 86C63 98 74 104 87 102Z"/>
+        <path d="M33 102C46 104 57 98 53 86C42 82 32 89 33 102Z"/>
+        <path d="M16 53C19 65 28 72 40 66C39 55 30 48 16 53Z"/>
+        <circle cx="60" cy="60" r="7"/>
+        <path d="M60 52V43M68 58L78 55M65 66L70 80M55 66L50 80M52 58L42 55"/>
+      </>;
+    case "retreat":
+      return <>
+        <circle cx="60" cy="60" r="35"/>
+        <path d="M60 20C48 33 49 43 60 49C71 43 72 33 60 20Z"/>
+        <path d="M98 54C84 47 75 54 77 66C88 72 98 65 98 54Z"/>
+        <path d="M84 92C88 78 78 73 68 80C65 91 73 97 84 92Z"/>
+        <path d="M36 92C47 97 55 91 52 80C42 73 32 78 36 92Z"/>
+        <path d="M22 54C22 65 32 72 43 66C45 54 36 47 22 54Z"/>
+        <path d="M60 49L77 66L68 80L52 80L43 66Z"/>
       </>;
     case "nadi":
       return <>
