@@ -1,6 +1,7 @@
 "use client";
 import { Shell } from "./shell";
 import { CourseCard } from "./course-card";
+import { BotanicalDivider } from "./botanical-divider";
 import { coursesByCollection } from "@/data/courses";
 
 export function Courses() {
@@ -20,6 +21,7 @@ export function Courses() {
             <section className="pageHero">
               <p className="eyebrow">YOGA SRI · MALAYSIA · ONLINE</p>
               <h1>{zh ? "课程与养护方案" : "Programmes & Care Pathways"}</h1>
+              <BotanicalDivider />
               <p>{zh ? "从近期实体课程，到长期经典哈他瑜伽、阿育吠陀 Nadi Scan 与重启方案，都集中在这里。价格与已确认排期直接列出；预约制项目可通过 WhatsApp 进一步沟通。" : "Find upcoming in-person courses, recurring classical Hatha Yoga, Ayurveda Nadi Scan and reset pathways in one place."}</p>
             </section>
 
