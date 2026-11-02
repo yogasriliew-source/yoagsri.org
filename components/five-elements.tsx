@@ -1,8 +1,8 @@
-import { KolamMark, type ElementKind } from "./kolam-mark";
+import { SiteIcon, type SiteIconName } from "./site-icon";
 import type { Lang } from "@/data/courses";
 
 const elements: ReadonlyArray<{
-  kind: ElementKind;
+  kind: SiteIconName;
   zh: string;
   en: string;
   qualityZh: string;
@@ -27,7 +27,7 @@ export function FiveElements({ lang }: { lang: Lang }) {
     </div>
     <div className="element-grid">
       {elements.map((el) => <div className="element-tile" key={el.kind}>
-        <KolamMark kind={el.kind} size={102} className={`element-mark element-${el.kind}`} />
+        <SiteIcon name={el.kind} size={102} className={`element-mark element-${el.kind}`} />
         <h3>{zh ? el.zh : el.en}</h3>
         <span className="element-english">{zh ? el.en : el.zh}</span>
         <p>{zh ? el.qualityZh : el.qualityEn}</p>
