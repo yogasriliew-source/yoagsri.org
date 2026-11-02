@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { Shell } from "./shell";
 import { CourseCard } from "./course-card";
+import { BotanicalDivider } from "./botanical-divider";
 import { currentFeaturedCourses, starterCourses } from "@/data/courses";
 
 export function Home() {
@@ -24,6 +25,7 @@ export function Home() {
                     <>From Ayur roots,<em>to Yogic bloom.</em></>
                   )}
                 </h1>
+                <BotanicalDivider />
                 <p className="intro">
                   {zh
                     ? "Yoga Sri 提供中文、英文与粤语指导的经典哈他瑜伽，并连接阿育吠陀评估、日常养护与深度重启方案，让练习不只停留在课堂，而能真正进入生活。"
@@ -42,6 +44,7 @@ export function Home() {
                 <img src="/images/yoga-sri-garden.jpeg" width={1613} height={1015}
                   alt={zh ? "Yoga Sri 在庭园中静坐练习" : "Yoga Sri seated in practice in a garden"}
                   loading="eager" />
+                <div className="photo-caption">{zh ? "古典瑜伽 · 在生活中生根" : "Classical wisdom · Lived experience"}</div>
               </div>
             </section>
 
@@ -50,6 +53,7 @@ export function Home() {
                 <div>
                   <p className="eyebrow">{hasDatedCourses ? "UPCOMING · MALAYSIA" : "START HERE · MALAYSIA"}</p>
                   <h2>{hasDatedCourses ? (zh ? "近期课程" : "Upcoming programmes") : (zh ? "从这里开始你的练习" : "Start your practice here")}</h2>
+                  <BotanicalDivider />
                 </div>
                 <Link className="link" href="/courses">
                   {zh ? "查看全部 →" : "View all →"}
@@ -68,6 +72,7 @@ export function Home() {
             <section className="paths">
               <p className="eyebrow">THREE WAYS TO BEGIN</p>
               <h2>{zh ? "你可以从三个入口开始" : "Three ways to begin"}</h2>
+              <BotanicalDivider />
               <div>
                 <article>
                   <i>01</i>
@@ -96,6 +101,7 @@ export function Home() {
               <div>
                 <p className="eyebrow">ABOUT YOGA SRI</p>
                 <h2>{zh ? "把传统完整地传递，也把它带回真实生活。" : "Preserving the tradition, bringing it into real life."}</h2>
+                <BotanicalDivider />
                 <p>
                   {zh
                     ? "Yoga Sri 于2017年完成超过1,750小时的 Isha Hatha Yoga 教师训练，持续在马来西亚、中国、台湾、日本、印度及线上带领课程。她的工作重点，是把经典瑜伽清晰地传递给中文学员，并与阿育吠陀医生合作，把练习、体质与日常生活连接起来。"
