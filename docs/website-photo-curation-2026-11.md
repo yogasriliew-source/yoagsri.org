@@ -41,3 +41,22 @@
 - [ ] Check live desktop + mobile screenshots before releasing PR #4
 
 **Production website remains unchanged.** This file is a selection specification, not a declaration that the photos are deployed.
+
+
+## Second pass — course-specific photos (12 inspected from the five practice subfolders)
+
+**Important:** many of these files are named `Promo - PPxxx`, and at least one bears an Isha watermark. They are useful for private visual review, **not yet approved for commercial website publication**. Verify photographer/organization copyright and Yoga Sri's current licensed usage before deployment. Until cleared, the site's owned original teaching photos and approved Kolam SVG remain the safe default.
+
+| Programme | Preferred visual candidate (private review) | Google Drive | Crop / action |
+|---|---|---|---|
+| Beginner / Upa Yoga | `Promo - PP150.jpg` | [source](https://drive.google.com/file/d/1_tQyF_pxq-qaDTBbxqoT_UQLSESAymrO/view) | Natural posture and greenery; verify usage rights |
+| Surya Kriya | `Promo - PP207.jpg` | [source](https://drive.google.com/file/d/1HbYQWGODTw_iqolrfu1PLvdoWMA8LQaG/view) | Spacious pose with natural light; verify practice-label accuracy and rights |
+| Surya practice group | `Promo - PP041.jpg` | [source](https://drive.google.com/file/d/1wFXKIdpILxdhJRvPvhTkT6YYSjzl1vKq/view) | Wide group image; category banner only; rights pending |
+| Yogasanas | `Promo - PP222.jpg` | [source](https://drive.google.com/file/d/1HsL9Z941_tHiyJWr0zCMcAcT8-LZo4yS/view) | Centered standing asana; retain full body; rights pending |
+| Angamardana | `Promo - PP297.jpg` | [source](https://drive.google.com/file/d/1_4nQfYOVKb_dxcx0yJtQ2I90SsUpTEHw/view) | Quiet grounded posture; verify depicts intended routine |
+| Bhuta Shuddhi | `Promo - PP249.jpg` | [source](https://drive.google.com/file/d/1wsYXJ2oqBYGqIaMPB8ihA0mN40bIt7a2/view) | Tools visible clearly; avoid distorting ritual items |
+| Bhuta Shuddhi alternative | `Promo - PP248.jpg` | [source](https://drive.google.com/file/d/1yxetc47itgAqZQHgjSeL_pY_wjuIXXLH/view) | Group practice and instruments; permission pending |
+
+**Not yet covered well:** Surya Shakti needs a distinct, accurately labeled licensed practice photograph; more current Malaysia beginner-teaching photos and an independently suitable Yoga Sri founder portrait are still needed.
+
+**Visual observation:** course promotional photographs vary in color/grading and photographic provenance. To preserve a consistent brand, use them only as honest photographic panels framed on warm ivory, never force a faux watercolor or faded sepia transformation. No photo will be added to the public web repository from this round without source/license checks.
