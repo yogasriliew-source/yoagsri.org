@@ -8,36 +8,294 @@ import { CalendarDays, Heart, Leaf, MessageCircle, Sparkles, MapPin, Phone } fro
 export default function YogaSriWebsite() {
   const courses = [
     {
-      title: "Yoga for Joints｜关节舒展瑜伽",
-      desc: "适合初学者、久坐上班族、身体僵硬或想温和开始练习的人。通过简单、安全的动作，让身体重新找回轻盈与流动。",
-      price: "RM80 起",
+        "title": "Yoga for Joints｜关节舒展瑜伽",
+        "desc": "温和启动关节与肌肉，让身体从久坐与紧绷中重新找到轻盈感。",
+        "price": "RM80 起",
+        "duration": "约 60–90 分钟",
+        "suitable": "零基础、久坐或想温和开始的人",
+        "overview": "以 Upa Yoga／关节激活练习为基础，透过简单动作认识身体的活动范围，逐步建立舒适、稳定的日常练习习惯。",
+        "benefits": [
+            "帮助活动关节与舒缓日常僵硬",
+            "提升身体觉察与灵活度",
+            "支持日常活动后的放松"
+        ],
+        "preparation": [
+            "无需瑜伽经验；请穿方便伸展的衣物并自备瑜伽垫。",
+            "建议在课前至少 1.5 小时结束正餐；可饮清水。",
+            "如有关节疼痛、近期受伤或术后恢复情况，请事先告知老师。"
+        ]
     },
     {
-      title: "Hatha for Beginners｜初学者哈他瑜伽",
-      desc: "为没有瑜伽基础的学员设计，帮助你学习正确的身体使用、呼吸配合与稳定练习方式。",
-      price: "RM180 起",
+        "title": "Hatha Yoga for Beginners｜哈他瑜伽入门",
+        "desc": "从基础体式与呼吸练习，建立更稳定的身体觉察及练习基础。",
+        "price": "RM80 起",
+        "duration": "依当期班次安排",
+        "suitable": "希望循序渐进学习古典哈他瑜伽的初学者",
+        "overview": "透过适合入门的基础体式、坐姿准备与 Nadi Shuddhi 呼吸练习，学习如何以细致、稳定的方式使用身体与呼吸。",
+        "benefits": [
+            "帮助舒展下肢与改善坐姿舒适度",
+            "培养身体、呼吸和注意力的协调",
+            "为后续经典哈他练习奠定基础"
+        ],
+        "preparation": [
+            "无需瑜伽基础；请自备瑜伽垫并穿宽松衣物。",
+            "部分体式需要空腹，报名后请依指定练习遵守饮食间隔。",
+            "孕期、疝气、近期大型手术或肌肉骨骼伤病，请报名时先与老师确认适用练习。"
+        ]
     },
     {
-      title: "Yogasanas｜经典瑜伽体式课程",
-      desc: "Isha 经典哈他瑜伽核心课程，适合想深入学习体式、稳定能量与建立长期练习基础的学员。",
-      price: "RM800 起",
+        "title": "Yoga Namaskar｜瑜伽合十礼",
+        "desc": "以重复而有意识的动作，练习脊柱周围的稳定与身体协调。",
+        "price": "预约咨询",
+        "duration": "依课程安排",
+        "suitable": "希望建立脊柱活动及日常练习习惯的人",
+        "overview": "瑜伽合十礼以一系列温和而细致的动作关注脊柱与周边肌群，作为日常瑜伽练习的一部分。",
+        "benefits": [
+            "支持脊柱周边肌群的活动与协调",
+            "帮助建立身体稳定感",
+            "适合培养规律、专注的练习节奏"
+        ],
+        "preparation": [
+            "请自备瑜伽垫，并穿便于活动的服装。",
+            "建议在课前至少 1.5 小时结束正餐；可饮清水。",
+            "有严重背部问题、近期手术或急性疼痛者，先向老师说明并寻求医疗建议。"
+        ]
     },
     {
-      title: "Bhuta Shuddhi｜五大元素净化",
-      desc: "通过传统的净化仪式与每日练习，帮助学员建立与五大元素之间更细腻的连接。课程含净化器具。",
-      price: "RM800 起",
+        "title": "Yoga for Memory & Focus｜专注力与记忆力瑜伽",
+        "desc": "透过身体、呼吸与注意力练习，培养清明、稳定的专注状态。",
+        "price": "预约咨询",
+        "duration": "约 120 分钟",
+        "suitable": "学生、忙碌上班族与想培养专注习惯的人",
+        "overview": "根植于古典瑜伽的身心练习组合，关注注意力、身体稳定、呼吸与日常压力的管理。课程不会要求学员靠紧绷和用力来维持专注。",
+        "benefits": [
+            "培养专注与日常学习觉察",
+            "支持放松与情绪稳定",
+            "帮助建立更有节奏的工作及学习状态"
+        ],
+        "preparation": [
+            "一般适合 12 岁以上，无需瑜伽基础。",
+            "建议课前 4 小时不吃正餐，并自备瑜伽垫。",
+            "孕期、疝气、近期大型手术或颈背部疾病等，请先告知老师并确认可参加的练习。"
+        ]
     },
     {
-      title: "Nadi Balance Scan｜脉诊平衡检测",
-      desc: "结合阿育吠陀医生解析与瑜伽顾问咨询，帮助你了解自己的体质状态，并找到更适合的练习与养护方向。",
-      price: "RM180 起",
+        "title": "Surya Shakti｜太阳能量练习",
+        "desc": "动态的古典哈他练习，重点培养力量、耐力与身体活力。",
+        "price": "RM350",
+        "duration": "依当期课程安排",
+        "suitable": "希望提升体能、学习规律身体练习的人",
+        "overview": "Surya Shakti 是由一系列动态姿势组成的传统练习，重点在有意识地使用身体、培养力量与活力。",
+        "benefits": [
+            "发展力量、柔韧与身体协调",
+            "提升动作中的注意力",
+            "帮助建立规律的体能练习习惯"
+        ],
+        "preparation": [
+            "请自备瑜伽垫及适合活动的衣物。",
+            "此课程有一定身体活动强度，课前须按老师指示保持空腹。",
+            "有心血管状况、关节伤病、孕期、疝气或近期手术者，报名时请先说明。"
+        ]
     },
     {
-      title: "Yoga × Ayurveda Programs｜瑜伽 × 阿育吠陀整合课程",
-      desc: "结合经典哈他瑜伽、体质分析、饮食建议与日常养护，为学员设计更完整的身心平衡体验。",
-      price: "预约咨询",
+        "title": "Surya Kriya｜太阳克里亚",
+        "desc": "21 个步骤组成的古典练习，注重身体、呼吸与内在稳定。",
+        "price": "RM450",
+        "duration": "依当期课程安排",
+        "suitable": "希望深入经典哈他瑜伽并建立长期练习基础的人",
+        "overview": "Surya Kriya 的名称意为与太阳相关的内在过程。练习以细致的步骤结合姿势、呼吸和注意力，强调完整、准确的学习与独立练习。",
+        "benefits": [
+            "培养身体稳定与注意力",
+            "深化对呼吸和身体协调的觉察",
+            "作为静坐及深入练习的准备"
+        ],
+        "preparation": [
+            "建议按完整课程参加，以学习每个步骤及必要修正。",
+            "课前需要保持空腹；请依报名后的正式指引准备。",
+            "孕期、近期手术、疝气及心脏、脊柱或关节问题，请先告知老师。"
+        ]
     },
-  ];
+    {
+        "title": "Surya Shakti + Surya Kriya｜太阳系列组合",
+        "desc": "将动态力量练习与精细的古典练习结合，循序建立身体基础。",
+        "price": "RM600",
+        "duration": "依当期组合课程安排",
+        "suitable": "希望系统学习太阳系列的学员",
+        "overview": "同属太阳系列的两套经典练习各有侧重点：Surya Shakti 注重动态力量与身体活力；Surya Kriya 注重步骤、呼吸、专注与内在稳定。",
+        "benefits": [
+            "兼顾体能与精细的身体觉察",
+            "建立较完整的自主练习基础",
+            "帮助培养持续练习的节奏"
+        ],
+        "preparation": [
+            "组合课包含不同强度与步骤，请参加完整教学。",
+            "课前空腹与饮食间隔以老师提供的课程通知为准。",
+            "有伤病、怀孕或近期大型手术等情况，报名时请先说明。"
+        ]
+    },
+    {
+        "title": "Yogasanas｜经典瑜伽体式",
+        "desc": "以精准而稳定的体式学习，深化身体与内在觉察。",
+        "price": "RM850",
+        "duration": "多节完整课程；依当期安排",
+        "suitable": "愿意耐心学习体式细节并持续自主练习的人",
+        "overview": "Yogasanas 不只是一般的伸展或健身课程。它强调以有意识的姿势、稳定的保持及精细的身体校准，建立对身心的深入觉察。",
+        "benefits": [
+            "培养平衡、稳定与身体协调",
+            "促进对姿势与呼吸的觉察",
+            "支持长期、系统的个人瑜伽练习"
+        ],
+        "preparation": [
+            "请预留完整课程时间，避免漏课。",
+            "练习前须遵守指定空腹要求，并自备瑜伽垫。",
+            "有脊柱、膝关节、颈部疾病、孕期或术后状况者，先与老师确认练习适宜性。"
+        ]
+    },
+    {
+        "title": "Angamardana｜安伽玛达那",
+        "desc": "不依赖器械的动态练习，培养力量、灵活性与身体掌控。",
+        "price": "全套 RM650｜单模块 RM180 起",
+        "duration": "完整系列或站／蹲／坐／躺模块",
+        "suitable": "希望建立体能与动作控制力的人",
+        "overview": "Angamardana 是一套结合多种动态动作的传统瑜伽练习，透过身体本身作为练习工具，系统性发展协调、耐力与力量。",
+        "benefits": [
+            "帮助强化肌肉与身体稳定性",
+            "培养耐力和活动能力",
+            "发展动作协调及身体觉察"
+        ],
+        "preparation": [
+            "动态强度较高，请确认身体情况适合参加。",
+            "课前须依正式通知保持空腹，并自备瑜伽垫。",
+            "如有心血管疾病、近期手术、孕期、疝气或肌肉骨骼损伤，请报名时先说明。"
+        ]
+    },
+    {
+        "title": "Bhuta Shuddhi｜五大元素净化",
+        "desc": "源于古典瑜伽的元素练习，以简洁的日常仪式深化内在觉察。",
+        "price": "RM850（含练习器具）",
+        "duration": "依当期课程安排",
+        "suitable": "对古典瑜伽的元素观与持续练习有兴趣的人",
+        "overview": "Bhuta Shuddhi 传统上关注土、水、火、风、空五大元素，并以特定程序作为日常内在练习。课程包含练习方法与所需器具。",
+        "benefits": [
+            "建立安定且有意识的练习时刻",
+            "探索古典瑜伽的五元素观",
+            "支持长期内在练习的持续性"
+        ],
+        "preparation": [
+            "报名时请了解课程器具的使用与保管说明。",
+            "请遵守老师说明的课前饮食、身体准备及练习条件。",
+            "若正在怀孕、患病或有近期手术，请先告知老师以确认参与条件。"
+        ]
+    },
+    {
+        "title": "Nada Yoga｜声音瑜伽",
+        "desc": "以声音与专注作为练习媒介，体验放松与内在觉察。",
+        "price": "预约咨询",
+        "duration": "依当期课程安排",
+        "suitable": "希望从较温和的声音练习开始的人",
+        "overview": "Nada Yoga 在传统瑜伽中运用特定发声与聆听练习，帮助参与者探索声音、注意力及内在体验之间的关系。",
+        "benefits": [
+            "培养聆听与注意力",
+            "支持放松及沉静",
+            "探索声音作为冥想准备的方法"
+        ],
+        "preparation": [
+            "无需体式基础；请穿着舒适衣物。",
+            "课程可能包含发声与安静聆听，请依现场指示练习。",
+            "如有咽喉不适、急性病症或其他特殊情况，请提前告诉老师。"
+        ]
+    },
+    {
+        "title": "Shanmukhi Mudra｜夏慕奇手印",
+        "desc": "以精微的手印与注意力练习，带回对感官与内在的觉察。",
+        "price": "预约咨询",
+        "duration": "依当期课程安排",
+        "suitable": "希望探索安静、内向的瑜伽练习的人",
+        "overview": "Shanmukhi Mudra 是古典瑜伽中的精微练习，强调感官、注意力与内在觉察。适合在老师引导下学习完整步骤。",
+        "benefits": [
+            "帮助从外在刺激转向内在觉察",
+            "支持安静与专注的练习",
+            "为进一步的冥想探索打下基础"
+        ],
+        "preparation": [
+            "原课程资料列明 14 岁以上；实际报名资格请向老师确认。",
+            "建议至少于课前 2.5 小时完成正餐；可饮清水。",
+            "若有眼、耳、鼻相关疾病、急性不适或术后状况，请先确认是否适合练习。"
+        ]
+    },
+    {
+        "title": "7-Day Online｜元素净化与阿育吠陀概论",
+        "desc": "七晚线上学习五大元素、Dosha 与日常生活养护的关系。",
+        "price": "RM350",
+        "duration": "7 天线上课程｜每堂约 90 分钟",
+        "suitable": "初学者、Bhuta Shuddhi 学员与对阿育吠陀有兴趣的人",
+        "overview": "以土、水、火、风、空五大元素为主线，介绍阿育吠陀的体质观、Agni、Ama、Ojas，以及每日作息与自我观察。",
+        "benefits": [
+            "建立古典瑜伽及阿育吠陀的基础知识",
+            "学习观察饮食、作息与身体感受",
+            "将课程反思融入日常生活"
+        ],
+        "preparation": [
+            "请在稳定网络及安静环境中参加。",
+            "课程不提供录制或回放，需按时参与。",
+            "请准备学习笔记并完成课后观察与作业；课程内容不代替医疗诊断。"
+        ]
+    },
+    {
+        "title": "Nadi Balance Scan｜脉诊平衡检测",
+        "desc": "结合阿育吠陀体质观点、报告与医生讲解，认识个人养护方向。",
+        "price": "RM180 起",
+        "duration": "依预约安排",
+        "suitable": "希望更系统了解阿育吠陀体质概念的人",
+        "overview": "以 Nadi Scan 报告和阿育吠陀医生讲解作为传统养护参考，搭配瑜伽与生活习惯咨询。此服务不属于标准医学检查。",
+        "benefits": [
+            "认识 Prakruti 与 Vikruti 等传统体质概念",
+            "整理日常作息、饮食与身体观察问题",
+            "为后续医生咨询及练习规划提供讨论方向"
+        ],
+        "preparation": [
+            "请提前预约，并告知工作人员需要的基础资料。",
+            "如有既往病史、正在服药或持续症状，请主动告知合格医生。",
+            "报告不用于诊断疾病，也不能替代常规医疗检查或治疗。"
+        ]
+    },
+    {
+        "title": "Yoga × Ayurveda｜基础与深度重启",
+        "desc": "依个人目标结合瑜伽、阿育吠陀教育及专业医生指导。",
+        "price": "预约咨询",
+        "duration": "依方案与医生安排",
+        "suitable": "希望进行多日综合学习或身心养护规划的人",
+        "overview": "可按需要设计一日体验、基础课程或深入静修方案，结合古典瑜伽学习、阿育吠陀饮食及生活方式教育；涉及疗程时由专业医师评估安排。",
+        "benefits": [
+            "建立较完整的练习与生活习惯认识",
+            "透过课程学习和指导制定可持续的日常方案",
+            "在医生监督下理解适合自身的传统养护选项"
+        ],
+        "preparation": [
+            "须事先确认课程包含内容、医师、费用及实际行程。",
+            "涉及阿育吠陀疗程时，须由合格医师评估个人适用性。",
+            "怀孕、慢性病、用药、术后状态或其他健康问题，请先向主治医生确认。"
+        ]
+    },
+    {
+        "title": "Corporate Yoga｜企业与团体课程",
+        "desc": "为工作场景设计温和、可参与的身体与专注练习。",
+        "price": "企业报价洽谈",
+        "duration": "依企业需求安排",
+        "suitable": "企业、学校与团队活动",
+        "overview": "根据参与人数、场地及活动目标组合适合的基础瑜伽、呼吸与专注内容。课程由 Yoga Sri 按团体情况设计。",
+        "benefits": [
+            "帮助团队建立短暂且有质量的休息时间",
+            "支持日常身体活动与压力管理意识",
+            "为团队活动提供共同体验"
+        ],
+        "preparation": [
+            "请提前确认场地、人数与参与者年龄层。",
+            "如安排体式课程，请让参加者穿方便活动的衣物并备妥瑜伽垫。",
+            "活动前收集需调整动作的特殊健康情况；不以团体课代替个人医疗建议。"
+        ]
+    }
+];
 
   return (
     <div className="min-h-screen bg-stone-50 text-stone-900">
@@ -109,6 +367,7 @@ export default function YogaSriWebsite() {
         <div className="text-center mb-12">
           <p className="text-sm uppercase tracking-[0.3em] text-stone-500 mb-3">Courses</p>
           <h2 className="font-serif text-4xl md:text-5xl">课程介绍</h2>
+          <p className="mt-4 text-stone-600">选择课程后，展开查看完整介绍、练习益处及各课程专属的课前须知。</p>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {courses.map((course) => (
@@ -116,6 +375,22 @@ export default function YogaSriWebsite() {
               <CardContent className="p-7">
                 <h3 className="font-serif text-2xl mb-3">{course.title}</h3>
                 <p className="text-stone-600 leading-7 mb-5">{course.desc}</p>
+                <details className="group rounded-2xl border border-stone-200 bg-stone-50/70 px-4 py-3 mb-5">
+                  <summary className="cursor-pointer flex items-center justify-between gap-3 text-sm font-medium text-stone-800">
+                    查看课程详情 <span aria-hidden="true" className="text-lg text-stone-500">＋</span>
+                  </summary>
+                  <div className="pt-4 mt-3 border-t border-stone-200 space-y-3 text-sm leading-7">
+                    <h4 className="font-semibold text-stone-900">完整课程介绍</h4>
+                    <p className="text-stone-600">{course.overview}</p>
+                    <h4 className="font-semibold text-stone-900">练习益处</h4>
+                    <ul className="list-disc pl-5 text-stone-600">{course.benefits.map((benefit) => <li key={benefit}>{benefit}</li>)}</ul>
+                    <h4 className="font-semibold text-stone-900">适合对象与时长</h4>
+                    <p className="text-stone-600">{course.suitable} · {course.duration}</p>
+                    <h4 className="font-semibold text-stone-900">课前须知</h4>
+                    <ul className="list-disc pl-5 text-stone-600">{course.preparation.map((note) => <li key={note}>{note}</li>)}</ul>
+                    <p className="text-xs text-stone-500">以上为课程学习方向及可能体验，非医疗效果保证。如有健康问题，请咨询合格医师。</p>
+                  </div>
+                </details>
                 <div className="flex items-center justify-between">
                   <span className="font-medium">{course.price}</span>
                   <a href="https://wa.me/60126725549" target="_blank" rel="noreferrer" className="text-sm underline">询问详情</a>
