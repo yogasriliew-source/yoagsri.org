@@ -164,16 +164,16 @@ const courses: Course[] = [
         "title": "Angamardana｜安伽玛达那",
         "desc": "不依赖器械的动态练习，培养力量、灵活性与身体掌控。",
         "price": "全套 RM650｜单模块 RM180 起",
-        "duration": "完整系列或站／蹲／坐／躺模块",
-        "suitable": "希望建立体能与动作控制力的人",
-        "overview": "Angamardana（安伽玛达那）是由多种动态练习组成的传统瑜伽健身体系，强调无需器械，通过身体本身发展力量、灵活度、耐力与协调。课程可按完整体系或站、蹲、坐、躺等模块安排。",
+        "duration": "单模块约 1.5 小时｜全套依班次安排",
+        "suitable": "初学者可从站、蹲、坐、躺的单模块开始；完整系列依个人体能选择",
+        "overview": "Angamardana（安伽玛达那）是由多种动态练习组成的传统瑜伽健身体系，强调无需器械，通过身体本身发展力量、灵活度、耐力与协调。课程可按完整体系或站、蹲、坐、躺等模块安排。初学者也可选择其中一个模块单独学习，每个模块约 1.5 小时，循序建立身体能力。",
         "benefits": [
             "帮助强健脊柱周边、骨骼与肌肉系统",
             "培养力量、体能、柔韧与身体控制",
             "改善身体活动中的轻盈感与协调感"
         ],
         "preparation": [
-            "这是一套较有强度的动态练习；儿童参与和模块选择须由老师按年龄、体能与课程安排确认。",
+            "入门可选择站、蹲、坐、躺单一模块，每模块约 1.5 小时；全套练习强度较高，老师会依学员体能建议适合的学习方式。",
             "常规空腹参考：正餐后至少4小时、点心后至少2.5小时、饮料后至少1.5小时；具体以课程通知和老师指导为准。",
             "孕期、活动性疝气、近期大型手术、心血管疾病或肌肉骨骼伤病者须先评估是否适合。"
         ]
@@ -363,12 +363,16 @@ const courses: Course[] = [
 type PathId = "beginner" | "classical" | "reset";
 
 const paths: { id: PathId; index: string; title: string; english: string; description: string; note: string; picks: string[] }[] = [
-  { id: "beginner", index: "01", title: "初学者系列", english: "Begin", description: "从线上知识、温和入门到循序建立身体能力。", note: "线上课 · 哈他瑜伽入门 · Angamardana", picks: ["7-Day Online", "Hatha Yoga for Beginners", "Angamardana"] },
+  { id: "beginner", index: "01", title: "初学者系列", english: "Begin", description: "从线上知识、温和入门到循序建立身体能力。", note: "线上课 · 哈他瑜伽入门 · Angamardana 单模块（90 分钟）", picks: ["7-Day Online", "Hatha Yoga for Beginners", "Angamardana"] },
   { id: "classical", index: "02", title: "经典课程", english: "Deepen", description: "以精确的指导学习完整的经典哈他瑜伽。", note: "Surya Kriya · Surya Shakti · Yogasanas", picks: ["Surya Kriya", "Surya Shakti", "Yogasanas"] },
   { id: "reset", index: "03", title: "健康重启", english: "Restore", description: "结合古典瑜伽、五大元素与阿育吠陀的传统生活智慧。", note: "静修营 · 阿育吠陀重启", picks: ["Yoga × Ayurveda"] }
 ];
 
 const images: Record<string, string> = {
+  "Yoga for Joints": "/images/upa-yoga.jpg",
+  "Angamardana": "/images/angamardana-standing.jpg",
+  "Surya Kriya": "/images/surya-kriya.jpg",
+  "Yogasanas": "/images/yogasanas.jpg",
   "Surya Shakti": "/images/surya-shakti.jpg",
   "Surya Shakti + Surya Kriya": "/images/surya-shakti.jpg"
 };
