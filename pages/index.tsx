@@ -369,10 +369,7 @@ const paths: { id: PathId; index: string; title: string; english: string; descri
 ];
 
 const images: Record<string, string> = {
-
-
   "Surya Shakti": "/images/surya-shakti.jpg",
-
   "Surya Shakti + Surya Kriya": "/images/surya-shakti.jpg"
 };
 const visibleNames = ["Yoga for Joints", "Surya Shakti", "Surya Kriya", "Yogasanas", "Angamardana", "Bhuta Shuddhi"];
@@ -453,7 +450,6 @@ export default function Home() {
     { label: "阿育吠陀与团体", ok: (c: Course) => /Nadi|Ayurveda|Corporate/.test(c.title) }
   ];
   const filtered = courses.filter(c => (filterItems.find(x => x.label === libraryFilter) || filterItems[0]).ok(c));
-  const navigate = (id: string) => { setMenuOpen(false); if (typeof document !== "undefined") document.getElementById(id)?.scrollIntoView({ behavior: "smooth" }); };
   const choose = (id: PathId) => { setSelected(id); if (typeof document !== "undefined") setTimeout(() => document.getElementById("recommendations")?.scrollIntoView({ behavior: "smooth", block: "start" }), 80); };
 
   return (
@@ -532,7 +528,7 @@ export default function Home() {
               <div><div className="eyebrow">YOUR LEARNING PATH</div><h3>{selectedPath.title} · {selectedPath.english}</h3><p>{selectedPath.description} 实际开课安排与个人适合度由老师确认。</p></div>
               <a className="text-link" href={whatsapp(selectedPath.title)} target="_blank" rel="noreferrer">不确定？直接问老师 <ArrowUpRight size={17}/></a>
             </div>
-                        <div className={"course-grid recommend-grid" + (selected === "reset" ? " reset-grid" : "")}>
+            <div className={"course-grid recommend-grid" + (selected === "reset" ? " reset-grid" : "")}>
               {selected === "reset" && <article className="course-card retreat-product">
                 <div className="retreat-graphic"><Kolam /><span>RETREAT · WELLBEING</span></div>
                 <div className="course-content">
@@ -551,7 +547,7 @@ export default function Home() {
         <section className="section-pad featured-section" id="featured">
           <div className="shell">
             <div className="section-heading split-heading">
-              <div><div className="eyebrow">02 / THE PRACTICES</div><h2>值得认识的<em>经典练习</em></h2></div>
+              <div><div className="eyebrow">03 / THE PRACTICES</div><h2>值得认识的<em>经典练习</em></h2></div>
               <p>不是越难越好，而是在合适的阶段，学习完整、准确、能够长期坚持的练习。</p>
             </div>
             <div className="featured-layout">
@@ -573,14 +569,14 @@ export default function Home() {
         </section>
         <section className="section-pad about-section shell" id="about">
           <div className="about-mark"><Kolam /></div>
-          <div className="about-copy"><div className="eyebrow">03 / MEET YOUR TEACHER</div><h2>一位老师，<em>一条持续学习的路。</em></h2><p>Yoga Sri 于 2017 年完成系统性的古典哈他瑜伽教师训练，自 2018 年持续全职教学，曾在马来西亚、台湾、中国、日本、印度及线上带领课程。</p><p>她重视清晰的指导、实际的身体感受与练习的长期建立，尤其希望让中文学员也能准确理解传统瑜伽的细节，而不只是跟着模仿动作。</p><div className="about-tags"><span>Malaysia based</span><span>Classical Hatha Yoga</span><span>Chinese · English · Cantonese</span></div></div>
+          <div className="about-copy"><div className="eyebrow">04 / MEET YOUR TEACHER</div><h2>一位老师，<em>一条持续学习的路。</em></h2><p>Yoga Sri 于 2017 年完成系统性的古典哈他瑜伽教师训练，自 2018 年持续全职教学，曾在马来西亚、台湾、中国、日本、印度及线上带领课程。</p><p>她重视清晰的指导、实际的身体感受与练习的长期建立，尤其希望让中文学员也能准确理解传统瑜伽的细节，而不只是跟着模仿动作。</p><div className="about-tags"><span>Malaysia based</span><span>Classical Hatha Yoga</span><span>Chinese · English · Cantonese</span></div></div>
           <div className="about-image"><img src="/images/surya-shakti.jpg" loading="lazy" alt="经典哈他瑜伽练习照片"/></div>
         </section>
         <section className="booking-section section-pad" id="booking">
-          <div className="shell booking-inner"><div><div className="eyebrow">04 / TAKE THE NEXT STEP</div><h2>准备好开始<br/><em>属于你的练习了吗？</em></h2><p>无需先填写复杂表单。告诉我们你感兴趣的课程，我们会通过 WhatsApp 回复可安排的班次、地点与报名步骤。</p></div><div className="booking-card"><div className="booking-label">报名流程 / HOW IT WORKS</div><ol><li><span>01</span>选择课程或学习方向</li><li><span>02</span>WhatsApp 确认班次与适合度</li><li><span>03</span>确认名额并完成报名</li></ol><a className="btn btn-cream" href={whatsapp(selectedPath.title)} target="_blank" rel="noreferrer"><MessageCircle size={19}/> WhatsApp 咨询我的课程 <ArrowUpRight size={18}/></a><small>将自动带入你当前选择的学习方向；不会要求在网页公开填写健康资料。</small></div></div>
+          <div className="shell booking-inner"><div><div className="eyebrow">05 / TAKE THE NEXT STEP</div><h2>准备好开始<br/><em>属于你的练习了吗？</em></h2><p>无需先填写复杂表单。告诉我们你感兴趣的课程，我们会通过 WhatsApp 回复可安排的班次、地点与报名步骤。</p></div><div className="booking-card"><div className="booking-label">报名流程 / HOW IT WORKS</div><ol><li><span>01</span>选择课程或学习方向</li><li><span>02</span>WhatsApp 确认班次与适合度</li><li><span>03</span>确认名额并完成报名</li></ol><a className="btn btn-cream" href={whatsapp(selectedPath.title)} target="_blank" rel="noreferrer"><MessageCircle size={19}/> WhatsApp 咨询我的课程 <ArrowUpRight size={18}/></a><small>将自动带入你当前选择的学习方向；不会要求在网页公开填写健康资料。</small></div></div>
         </section>
         <section className="section-pad faq-section shell" id="faq">
-          <div className="section-heading split-heading"><div><div className="eyebrow">05 / BEFORE YOU BEGIN</div><h2>你可能还想知道</h2></div><p>从第一次上课到私人课程，我们先回答最常被问到的问题。</p></div>
+          <div className="section-heading split-heading"><div><div className="eyebrow">06 / BEFORE YOU BEGIN</div><h2>你可能还想知道</h2></div><p>从第一次上课到私人课程，我们先回答最常被问到的问题。</p></div>
           <div className="faq-list">
             {[
               ["完全没有瑜伽基础，可以参加吗？","可以。从 Yoga for Joints 或 Hatha Yoga for Beginners 开始。无需先具备柔软度；老师会根据具体练习与个人状况确认适合度。"],
@@ -593,7 +589,7 @@ export default function Home() {
         </section>
       </main>
       <footer className="site-footer"><div className="shell footer-grid"><div><div className="footer-logo"><Kolam/> <span>Yoga Sri</span></div><p>Classical practice for a more conscious life.</p></div><div><strong>Explore</strong><a href="#find">三大学习路径</a><a href="#featured">课程资料</a><a href="#about">关于老师</a></div><div><strong>Connect</strong><a href={whatsapp()} target="_blank" rel="noreferrer">WhatsApp: +60 12-672 5549</a><span>Kuala Lumpur · Petaling Jaya · Online</span></div></div><div className="shell footer-bottom"><span>© 2026 Yoga Sri. All rights reserved.</span><span>瑜伽与阿育吠陀教育内容不替代医疗建议。</span></div></footer>
-      <div className="mobile-action-bar"><a href="#find">找到适合的课程 <ArrowRight size={16}/></a><a href={whatsapp()} target="_blank" rel="noreferrer"><MessageCircle size={17}/> 直接咨询</a></div>
+      <div className="mobile-action-bar"><a href="#find">找到适合的课程 <ArrowRight size={16}/></a><a href={whatsapp(selectedPath.title)} target="_blank" rel="noreferrer"><MessageCircle size={17}/> 直接咨询</a></div>
     </>
   );
 }
