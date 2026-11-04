@@ -365,14 +365,14 @@ type PathId = "beginner" | "classical" | "reset";
 const paths: { id: PathId; index: string; title: string; english: string; description: string; note: string; picks: string[] }[] = [
   { id: "beginner", index: "01", title: "初学者系列", english: "Begin", description: "从线上知识、温和入门到循序建立身体能力。", note: "线上课 · 哈他瑜伽入门 · Angamardana", picks: ["7-Day Online", "Hatha Yoga for Beginners", "Angamardana"] },
   { id: "classical", index: "02", title: "经典课程", english: "Deepen", description: "以精确的指导学习完整的经典哈他瑜伽。", note: "Surya Kriya · Surya Shakti · Yogasanas", picks: ["Surya Kriya", "Surya Shakti", "Yogasanas"] },
-  { id: "reset", index: "03", title: "健康重启", english: "Restore", description: "结合古典瑜伽、五大元素与阿育吠陀的传统生活智慧。", note: "静修营 · 阿育吠陀重启", picks: ["Yoga × Ayurveda", "Nadi Balance Scan", "Bhuta Shuddhi"] }
+  { id: "reset", index: "03", title: "健康重启", english: "Restore", description: "结合古典瑜伽、五大元素与阿育吠陀的传统生活智慧。", note: "静修营 · 阿育吠陀重启", picks: ["Yoga × Ayurveda"] }
 ];
 
 const images: Record<string, string> = {
-  "Yoga for Joints": "/images/upa-yoga.jpg",
-  "Hatha Yoga for Beginners": "/images/upa-yoga.jpg",
+
+
   "Surya Shakti": "/images/surya-shakti.jpg",
-  "Angamardana": "/images/angamardana-01.jpg",
+
   "Surya Shakti + Surya Kriya": "/images/surya-shakti.jpg"
 };
 const visibleNames = ["Yoga for Joints", "Surya Shakti", "Surya Kriya", "Yogasanas", "Angamardana", "Bhuta Shuddhi"];
@@ -491,7 +491,7 @@ export default function Home() {
             <div className="hero-proof"><span>2017 教师训练</span><i/><span>1750+ 小时系统学习</span><i/><span>中文 · English · 粤语</span></div>
           </div>
           <div className="hero-visual">
-            <div className="hero-photo"><img src="/images/yoga-sri-portrait.jpeg" alt="Yoga Sri 于印度古典建筑中手持莲花的照片" fetchPriority="high" /></div>
+            <div className="hero-photo"><img src="/images/yoga-sri-portrait.jpeg" alt="Yoga Sri 的个人照片" fetchPriority="high" /></div>
             <div className="hero-stamp"><Kolam /><small>ROOTED IN PRACTICE<br/>OPEN TO LIFE</small></div>
             <div className="hero-caption">YOGA SRI <span>·</span> CLASSICAL HATHA YOGA</div>
           </div>
@@ -532,12 +532,20 @@ export default function Home() {
               <div><div className="eyebrow">YOUR LEARNING PATH</div><h3>{selectedPath.title} · {selectedPath.english}</h3><p>{selectedPath.description} 实际开课安排与个人适合度由老师确认。</p></div>
               <a className="text-link" href={whatsapp(selectedPath.title)} target="_blank" rel="noreferrer">不确定？直接问老师 <ArrowUpRight size={17}/></a>
             </div>
-            {selected === "reset" && <div className="retreat-choice">
-              <div><div className="eyebrow">RESTORE / RETREAT</div><h4>瑜伽 × 阿育吠陀静修营</h4><p>透过沉浸式的学习与实践，深入探索身心、五元素及日常生活方式。具体营期、内容、住宿、医师与费用将另行确认。</p></div>
-              <a href={whatsapp("瑜伽 × 阿育吠陀静修营")} target="_blank" rel="noreferrer">咨询静修营 <ArrowUpRight size={17}/></a>
-            </div>}
-            {selected === "beginner" && <p className="track-note">Angamardana 属于较有强度的动态练习，并非所有零基础学员都适合直接参加；可先由老师评估体能与适合模块。</p>}
-            <div className="course-grid recommend-grid">{recommended.map((course, i) => <CourseCard course={course} key={course.title} badge={i === 0 ? "从这个方向开始" : ""} />)}</div>
+                        <div className={"course-grid recommend-grid" + (selected === "reset" ? " reset-grid" : "")}>
+              {selected === "reset" && <article className="course-card retreat-product">
+                <div className="retreat-graphic"><Kolam /><span>RETREAT · WELLBEING</span></div>
+                <div className="course-content">
+                  <div className="course-meta"><span>沉浸式静修与学习</span><span className="course-price">当期咨询</span></div>
+                  <h3>瑜伽 × 阿育吠陀静修营</h3>
+                  <p className="course-desc">结合古典瑜伽教学、五大元素理念与阿育吠陀传统生活方式教育，体验更有意识的日常节奏。</p>
+                  <p className="course-fit"><span>适合</span>希望通过完整静修体验探索自身生活方式的人</p>
+                  <details className="course-details"><summary>报名与安排说明 <ChevronDown size={16}/></summary><div className="detail-body"><p>具体营期、教学内容、住宿、医生、费用及可能包含的项目以当期公告为准。涉及疗程时须由合格医生评估适合度。</p></div></details>
+                  <a className="course-action" href={whatsapp("瑜伽 × 阿育吠陀静修营")} target="_blank" rel="noreferrer">咨询静修营安排 <ArrowUpRight size={18}/></a>
+                </div>
+              </article>}
+              {recommended.map((course, i) => <CourseCard course={course} key={course.title} badge={selected === "reset" ? "一日 / 基础 / 深度" : i === 0 ? "从这个方向开始" : ""} />)}
+            </div>
           </div>
         </section>
         <section className="section-pad featured-section" id="featured">
@@ -566,7 +574,7 @@ export default function Home() {
         <section className="section-pad about-section shell" id="about">
           <div className="about-mark"><Kolam /></div>
           <div className="about-copy"><div className="eyebrow">03 / MEET YOUR TEACHER</div><h2>一位老师，<em>一条持续学习的路。</em></h2><p>Yoga Sri 于 2017 年完成系统性的古典哈他瑜伽教师训练，自 2018 年持续全职教学，曾在马来西亚、台湾、中国、日本、印度及线上带领课程。</p><p>她重视清晰的指导、实际的身体感受与练习的长期建立，尤其希望让中文学员也能准确理解传统瑜伽的细节，而不只是跟着模仿动作。</p><div className="about-tags"><span>Malaysia based</span><span>Classical Hatha Yoga</span><span>Chinese · English · Cantonese</span></div></div>
-          <div className="about-image"><img src="/images/angamardana-02.jpg" loading="lazy" alt="Angamardana 经典哈他瑜伽练习照片"/></div>
+          <div className="about-image"><img src="/images/surya-shakti.jpg" loading="lazy" alt="经典哈他瑜伽练习照片"/></div>
         </section>
         <section className="booking-section section-pad" id="booking">
           <div className="shell booking-inner"><div><div className="eyebrow">04 / TAKE THE NEXT STEP</div><h2>准备好开始<br/><em>属于你的练习了吗？</em></h2><p>无需先填写复杂表单。告诉我们你感兴趣的课程，我们会通过 WhatsApp 回复可安排的班次、地点与报名步骤。</p></div><div className="booking-card"><div className="booking-label">报名流程 / HOW IT WORKS</div><ol><li><span>01</span>选择课程或学习方向</li><li><span>02</span>WhatsApp 确认班次与适合度</li><li><span>03</span>确认名额并完成报名</li></ol><a className="btn btn-cream" href={whatsapp(selectedPath.title)} target="_blank" rel="noreferrer"><MessageCircle size={19}/> WhatsApp 咨询我的课程 <ArrowUpRight size={18}/></a><small>将自动带入你当前选择的学习方向；不会要求在网页公开填写健康资料。</small></div></div>
