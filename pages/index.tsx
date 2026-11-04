@@ -360,15 +360,12 @@ const courses: Course[] = [
     }
 ];
 
-type PathId = "beginner" | "energy" | "depth" | "ayurveda" | "online" | "team";
+type PathId = "beginner" | "classical" | "reset";
 
 const paths: { id: PathId; index: string; title: string; english: string; description: string; note: string; picks: string[] }[] = [
-  { id: "beginner", index: "01", title: "我是初学者", english: "Begin gently", description: "从身体活动与简单练习开始，不需要柔软度或经验。", note: "先从温和入门开始", picks: ["Yoga for Joints", "Hatha Yoga for Beginners", "Yoga Namaskar"] },
-  { id: "energy", index: "02", title: "我想增强体能", english: "Move with strength", description: "建立力量、耐力、灵活度与规律练习的基础。", note: "动态身体练习", picks: ["Surya Shakti", "Angamardana", "Surya Shakti + Surya Kriya"] },
-  { id: "depth", index: "03", title: "我想深入练习", english: "Practice with depth", description: "探索更精细的体式、内在专注与经典修习。", note: "适合想持续练习的人", picks: ["Surya Kriya", "Yogasanas", "Bhuta Shuddhi"] },
-  { id: "ayurveda", index: "04", title: "我想了解阿育吠陀", english: "Understand your rhythm", description: "从传统体质观、日常生活方式与瑜伽学习切入。", note: "咨询与学习路径", picks: ["Nadi Balance Scan", "Yoga × Ayurveda", "Bhuta Shuddhi"] },
-  { id: "online", index: "05", title: "我想线上学习", english: "Learn from anywhere", description: "不受地点限制，从五元素与日常觉察建立理解。", note: "线上课程", picks: ["7-Day Online", "Nada Yoga", "Shanmukhi Mudra"] },
-  { id: "team", index: "06", title: "我在寻找团体课程", english: "Practice together", description: "为企业、学校或组织规划适合参与者的课程。", note: "依人数与目标安排", picks: ["Corporate Yoga", "Yoga for Memory & Focus", "Children's Yoga"] }
+  { id: "beginner", index: "01", title: "初学者系列", english: "Begin", description: "从线上知识、温和入门到循序建立身体能力。", note: "线上课 · 哈他瑜伽入门 · Angamardana", picks: ["7-Day Online", "Hatha Yoga for Beginners", "Angamardana"] },
+  { id: "classical", index: "02", title: "经典课程", english: "Deepen", description: "以精确的指导学习完整的经典哈他瑜伽。", note: "Surya Kriya · Surya Shakti · Yogasanas", picks: ["Surya Kriya", "Surya Shakti", "Yogasanas"] },
+  { id: "reset", index: "03", title: "健康重启", english: "Restore", description: "结合古典瑜伽、五大元素与阿育吠陀的传统生活智慧。", note: "静修营 · 阿育吠陀重启", picks: ["Yoga × Ayurveda", "Nadi Balance Scan", "Bhuta Shuddhi"] }
 ];
 
 const images: Record<string, string> = {
@@ -470,8 +467,8 @@ export default function Home() {
         <div className="shell header-inner">
           <a href="#top" className="brand" aria-label="Yoga Sri 首页" onClick={() => setMenuOpen(false)}><span className="brand-symbol">✳</span>Yoga Sri<span className="brand-tail">CLASSICAL PRACTICE</span></a>
           <nav className={"main-nav" + (menuOpen ? " open" : "")} aria-label="主导航">
-            <a href="#find" onClick={() => setMenuOpen(false)}>找到适合我的课程</a>
-            <a href="#featured" onClick={() => setMenuOpen(false)}>经典哈他瑜伽</a>
+            <a href="#find" onClick={() => setMenuOpen(false)}>三大学习路径</a>
+            <a href="#philosophy" onClick={() => setMenuOpen(false)}>瑜伽 × 阿育吠陀</a>
             <a href="#about" onClick={() => setMenuOpen(false)}>认识 Yoga Sri</a>
             <a href="#faq" onClick={() => setMenuOpen(false)}>常见问题</a>
             <a href={whatsapp()} className="nav-mobile-cta" target="_blank" rel="noreferrer">WhatsApp 咨询</a>
@@ -483,12 +480,12 @@ export default function Home() {
       <main id="top">
         <section className="hero shell">
           <div className="hero-copy">
-            <div className="eyebrow"><span className="eyebrow-line" /> YOGA SRI · MALAYSIA & ONLINE</div>
+            <div className="eyebrow"><span className="eyebrow-line" /> FIVE ELEMENTS · CLASSICAL HATHA YOGA · AYURVEDA</div>
             <h1>从身体开始，<br/><em>探索更完整的自己。</em></h1>
             <p className="hero-lead">古典哈他瑜伽 · 阿育吠陀生活智慧</p>
-            <p className="hero-description">不需要先懂瑜伽，也不需要知道哪一种练习最适合你。从你的目标出发，找到适合当前阶段的学习方式。</p>
+            <p className="hero-description">以五大元素的传统智慧为理念，将古典哈他瑜伽与阿育吠陀的实践融为一条探索之路。从初学、深入修习到生活养护，与你一起唤醒生命原有的活力。</p>
             <div className="hero-actions">
-              <a className="btn btn-primary" href="#find">帮我找到合适的练习 <ArrowRight size={18}/></a>
+              <a className="btn btn-primary" href="#find">探索三大学习路径 <ArrowRight size={18}/></a>
               <a className="text-link" href="#featured">浏览课程 <ArrowUpRight size={17}/></a>
             </div>
             <div className="hero-proof"><span>2017 教师训练</span><i/><span>1750+ 小时系统学习</span><i/><span>中文 · English · 粤语</span></div>
@@ -499,11 +496,27 @@ export default function Home() {
             <div className="hero-caption">YOGA SRI <span>·</span> CLASSICAL HATHA YOGA</div>
           </div>
         </section>
-        <div className="ribbon"><div className="shell ribbon-inner"><span>一套练习，也是一种生活方式</span><span>Classical · Grounded · Personal</span><span>KL · PJ · Online</span></div></div>
+        <div className="ribbon"><div className="shell ribbon-inner"><span>土 EARTH</span><span>水 WATER</span><span>火 FIRE</span><span>风 AIR</span><span>空 SPACE</span></div></div>
+        <section className="philosophy-section shell" id="philosophy">
+          <div className="philosophy-emblem"><Kolam/><span>ONE CONTINUOUS PATH</span></div>
+          <div className="philosophy-content">
+            <div className="eyebrow">01 / THE PHILOSOPHY</div>
+            <h2>不必在瑜伽与阿育吠陀之间<em>做选择。</em></h2>
+            <p className="philosophy-lead">它们是探索生命与健康的两种智慧，也是互相补充的实践方式。</p>
+            <p>真正的健康，不只是暂时缓解身体的不适，更是如何透过日常练习、饮食、作息与自我觉察，逐渐培养一种自然、稳定而有活力的生活状态。</p>
+            <p>在古典瑜伽的理解中，生命不仅是物质身体，也包含头脑、情绪与更细微的能量层面。当我们开始关注这些层面之间的关系，便有机会更深入地认识自己。</p>
+            <div className="wisdom-pair">
+              <div><span>YOGA</span><h3>古典哈他瑜伽</h3><p>从身体、呼吸、专注与内在体验出发，探索身心的协调与稳定。</p></div>
+              <div><span>AYURVEDA</span><h3>阿育吠陀</h3><p>从五大元素、个人体质、饮食、作息与季节变化出发，探索符合自身需要的生活方式。</p></div>
+            </div>
+            <p className="philosophy-closing">与 Yoga Sri 一起，从古老智慧中寻找适合现代生活的实践方式，重新唤醒生命原有的活力。</p>
+            <a className="text-link" href="#find">选择你的学习起点 <ArrowRight size={17}/></a>
+          </div>
+        </section>
         <section className="section-pad shell" id="find">
           <div className="section-heading split-heading">
-            <div><div className="eyebrow">01 / FIND YOUR PATH</div><h2>你现在，<em>想从哪里开始？</em></h2></div>
-            <p>不用先理解所有课程名称。选择最接近你现在的目标，我们会先呈现对应的练习方向。</p>
+            <div><div className="eyebrow">02 / THREE PATHWAYS</div><h2>一条理念，<em>三种开始。</em></h2></div>
+            <p>不需要先读懂十多门课程。先选择你现在的学习阶段，再认识对应的练习与安排。</p>
           </div>
           <div className="path-grid">
             {paths.map(path => (
@@ -516,10 +529,15 @@ export default function Home() {
           </div>
           <div className="recommend-panel" id="recommendations">
             <div className="recommend-heading">
-              <div><div className="eyebrow">PERSONALIZED STARTING POINT</div><h3>为「{selectedPath.title}」推荐的课程</h3><p>以下是学习方向建议，实际报名班次与个人适合度由老师确认。</p></div>
+              <div><div className="eyebrow">YOUR LEARNING PATH</div><h3>{selectedPath.title} · {selectedPath.english}</h3><p>{selectedPath.description} 实际开课安排与个人适合度由老师确认。</p></div>
               <a className="text-link" href={whatsapp(selectedPath.title)} target="_blank" rel="noreferrer">不确定？直接问老师 <ArrowUpRight size={17}/></a>
             </div>
-            <div className="course-grid recommend-grid">{recommended.map((course, i) => <CourseCard course={course} key={course.title} badge={i === 0 ? "建议从这里开始" : ""} />)}</div>
+            {selected === "reset" && <div className="retreat-choice">
+              <div><div className="eyebrow">RESTORE / RETREAT</div><h4>瑜伽 × 阿育吠陀静修营</h4><p>透过沉浸式的学习与实践，深入探索身心、五元素及日常生活方式。具体营期、内容、住宿、医师与费用将另行确认。</p></div>
+              <a href={whatsapp("瑜伽 × 阿育吠陀静修营")} target="_blank" rel="noreferrer">咨询静修营 <ArrowUpRight size={17}/></a>
+            </div>}
+            {selected === "beginner" && <p className="track-note">Angamardana 属于较有强度的动态练习，并非所有零基础学员都适合直接参加；可先由老师评估体能与适合模块。</p>}
+            <div className="course-grid recommend-grid">{recommended.map((course, i) => <CourseCard course={course} key={course.title} badge={i === 0 ? "从这个方向开始" : ""} />)}</div>
           </div>
         </section>
         <section className="section-pad featured-section" id="featured">
@@ -566,7 +584,7 @@ export default function Home() {
           </div>
         </section>
       </main>
-      <footer className="site-footer"><div className="shell footer-grid"><div><div className="footer-logo"><Kolam/> <span>Yoga Sri</span></div><p>Classical practice for a more conscious life.</p></div><div><strong>Explore</strong><a href="#find">找到你的练习</a><a href="#featured">课程资料</a><a href="#about">关于老师</a></div><div><strong>Connect</strong><a href={whatsapp()} target="_blank" rel="noreferrer">WhatsApp: +60 12-672 5549</a><span>Kuala Lumpur · Petaling Jaya · Online</span></div></div><div className="shell footer-bottom"><span>© 2026 Yoga Sri. All rights reserved.</span><span>瑜伽与阿育吠陀教育内容不替代医疗建议。</span></div></footer>
+      <footer className="site-footer"><div className="shell footer-grid"><div><div className="footer-logo"><Kolam/> <span>Yoga Sri</span></div><p>Classical practice for a more conscious life.</p></div><div><strong>Explore</strong><a href="#find">三大学习路径</a><a href="#featured">课程资料</a><a href="#about">关于老师</a></div><div><strong>Connect</strong><a href={whatsapp()} target="_blank" rel="noreferrer">WhatsApp: +60 12-672 5549</a><span>Kuala Lumpur · Petaling Jaya · Online</span></div></div><div className="shell footer-bottom"><span>© 2026 Yoga Sri. All rights reserved.</span><span>瑜伽与阿育吠陀教育内容不替代医疗建议。</span></div></footer>
       <div className="mobile-action-bar"><a href="#find">找到适合的课程 <ArrowRight size={16}/></a><a href={whatsapp()} target="_blank" rel="noreferrer"><MessageCircle size={17}/> 直接咨询</a></div>
     </>
   );
