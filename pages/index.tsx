@@ -52,42 +52,8 @@ const courses: Course[] = [
             "孕期、疝气、心血管疾病及近期手术或伤病者，报名前先与老师确认适用练习。"
         ]
     },
-    {
-        "title": "Yoga Namaskar｜瑜伽合十礼",
-        "desc": "以重复而有意识的动作，练习脊柱周围的稳定与身体协调。",
-        "price": "预约咨询",
-        "duration": "依课程安排",
-        "suitable": "希望建立脊柱活动及日常练习习惯的人",
-        "overview": "Yoga Namaskar（瑜伽合十礼）是通过规律、细致的动作练习关注脊柱及其周边肌群的古典瑜伽方法，适合作为日常身体觉察练习。",
-        "benefits": [
-            "支持脊柱周边肌群的力量与活动能力",
-            "培养身体协调和平衡感",
-            "帮助建立持续而有意识的日常练习习惯"
-        ],
-        "preparation": [
-            "原始课程资料列明 Yoga Namaskar 一般适合7岁及以上；未成年学员须参与适龄课程。",
-            "请携带瑜伽垫，按具体班次要求准备空腹状态。",
-            "孕期及有脊柱、膝关节或近期手术问题者，应先由老师确认是否适合。"
-        ]
-    },
-    {
-        "title": "Yoga for Memory & Focus｜专注力与记忆力瑜伽",
-        "desc": "透过身体、呼吸与注意力练习，培养清明、稳定的专注状态。",
-        "price": "预约咨询",
-        "duration": "约 120 分钟",
-        "suitable": "学生、忙碌上班族与想培养专注习惯的人",
-        "overview": "依古典瑜伽练习组合设计的专题课程，以关节舒展、基础体式、呼吸与专注练习，帮助学员培养稳定而清晰的注意力。注重从身体和呼吸出发建立专注，而非依靠持续紧绷来强迫集中。",
-        "benefits": [
-            "培养注意力及学习时的清晰感",
-            "支持身体、头脑与情绪的平衡",
-            "建立应对日常压力与疲劳的放松习惯"
-        ],
-        "preparation": [
-            "适合一般12岁以上学员；无需瑜伽基础。",
-            "请携带瑜伽垫，按具体练习遵守课前空腹要求。",
-            "孕期、疝气、近期大型手术及颈背部疾病等情况，报名前请先与老师确认。"
-        ]
-    },
+
+
     {
         "title": "Surya Shakti｜太阳能量练习",
         "desc": "动态的古典哈他练习，重点培养力量、耐力与身体活力。",
@@ -322,38 +288,21 @@ const courses: Course[] = [
             "请依老师安排学习动作，不自行增加强度。"
         ]
     },
-    {
-        "title": "Jala Neti｜瑜伽洗鼻术",
-        "desc": "传统瑜伽的鼻腔清洁练习，需在正确指导下学习。",
-        "price": "预约咨询",
-        "duration": "依课程安排",
-        "suitable": "希望认识传统瑜伽鼻腔清洁方法的人",
-        "overview": "Jala Neti 是传统瑜伽中的鼻腔清洁练习，特别强调正确的教学、卫生和操作准备。课程以安全、规范地认识这项方法为主，不作为耳鼻喉疾病的治疗。",
-        "benefits": [
-            "认识传统瑜伽的个人清洁习惯",
-            "学习在指导下理解正确的使用与卫生原则",
-            "培养对鼻腔舒适度和身体状态的觉察"
-        ],
-        "preparation": [
-            "必须在合格老师的指导下学习，未上课前不要根据网页文字自行操作。",
-            "鼻窦或耳部疾病、近期手术、出血、感染及其他特殊状况请先咨询医生。",
-            "报名后再由老师说明所需器具、清洁要求及适用条件。"
-        ]
-    },
+
     {
         "title": "Children's Yoga｜儿童瑜伽",
         "desc": "按年龄使用专门的瑜伽练习组合，让孩子在轻松的引导中发展身体与专注。",
         "price": "预约咨询",
         "duration": "依适龄课程安排",
         "suitable": "希望从适龄活动和专注练习开始的儿童及家庭",
-        "overview": "儿童课程可依年龄和活动能力安排温和的 Upa-Yoga、Yoga Namaskar、呼吸与声音练习，部分班次也可包含专门的儿童版 Surya Shakti。练习内容和强度因年龄而不同，不能直接套用成人课程。",
+        "overview": "儿童课程可依年龄和活动能力安排温和的 Upa-Yoga、呼吸与声音练习，部分班次也可包含专门的儿童版 Surya Shakti。练习内容和强度因年龄而不同，不能直接套用成人课程。",
         "benefits": [
             "培养身体协调与活动习惯",
             "鼓励注意力、规律与自我觉察",
             "透过适龄活动建立愉快的学习体验"
         ],
         "preparation": [
-            "不同模块有不同年龄条件，例如部分温和 Upa-Yoga 适合较小儿童；Yoga Namaskar 通常为7岁及以上。",
+            "不同模块有不同年龄条件，例如部分温和 Upa-Yoga 适合较小儿童；具体适龄要求以所选课程为准。",
             "Surya Shakti 儿童班须使用7至13岁专门教材与指定教学安排。",
             "请由家长提供学童健康状况并按课程通知准备衣物、瑜伽垫和饮食间隔。"
         ]
@@ -449,8 +398,8 @@ export default function Home() {
   const recommended = selectedPath.picks.map(findCourse).filter((c): c is Course => Boolean(c));
   const filterItems = [
     { label: "全部", ok: (_: Course) => true },
-    { label: "经典哈他", ok: (c: Course) => !/Online|Nadi|Ayurveda|Corporate|Children|Memory/.test(c.title) },
-    { label: "线上与专题", ok: (c: Course) => /Online|Memory|Eye|Children|Jala|Nada|Shanmukhi/.test(c.title) },
+    { label: "经典哈他", ok: (c: Course) => !/Online|Nadi|Ayurveda|Corporate|Children/.test(c.title) },
+    { label: "线上与专题", ok: (c: Course) => /Online|Eye|Children|Nada|Shanmukhi/.test(c.title) },
     { label: "阿育吠陀与团体", ok: (c: Course) => /Nadi|Ayurveda|Corporate/.test(c.title) }
   ];
   const filtered = courses.filter(c => (filterItems.find(x => x.label === libraryFilter) || filterItems[0]).ok(c));
@@ -501,9 +450,9 @@ export default function Home() {
           <div className="philosophy-emblem"><Kolam/><span>ONE CONTINUOUS PATH</span></div>
           <div className="philosophy-content">
             <div className="eyebrow">01 / THE PHILOSOPHY</div>
-            <h2>不必在瑜伽与阿育吠陀之间<em>做选择。</em></h2>
-            <p className="philosophy-lead">它们是探索生命与健康的两种智慧，也是互相补充的实践方式。</p>
-            <p>真正的健康，不只是暂时缓解身体的不适，更是如何透过日常练习、饮食、作息与自我觉察，逐渐培养一种自然、稳定而有活力的生活状态。</p>
+            <h2>古老的智慧，<em>回到生命健康的根源。</em></h2>
+            <p className="philosophy-lead">从古典哈他瑜伽与阿育吠陀出发，重新认识身体、生活与生命之间的联系。</p>
+            <p>两门源远流长的传统智慧，从不同角度关注生命：瑜伽透过身体、呼吸与内在练习，阿育吠陀则从体质、饮食、作息与自然节律理解日常养护。它们相互补充，指向更有觉察、可持续的生活方式。</p>
             <p>在古典瑜伽的理解中，生命不仅是物质身体，也包含头脑、情绪与更细微的能量层面。当我们开始关注这些层面之间的关系，便有机会更深入地认识自己。</p>
             <div className="wisdom-pair">
               <div><span>YOGA</span><h3>古典哈他瑜伽</h3><p>从身体、呼吸、专注与内在体验出发，探索身心的协调与稳定。</p></div>
