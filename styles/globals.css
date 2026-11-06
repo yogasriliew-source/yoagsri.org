@@ -220,3 +220,32 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:500}h1 em,h2 em,h3 em{font-styl
 .retreat-graphic svg{height:104px;width:104px}
 .retreat-graphic span{font-size:10px;font-weight:700;letter-spacing:.18em;color:#6d806e}
 @media(max-width:650px){.reset-grid{grid-template-columns:1fr}.retreat-graphic{aspect-ratio:16/9}}
+
+/* Readable mobile typography and a consistent compact course layout. */
+:root{--muted:#526257}
+html{scroll-padding-top:100px}
+[id]{scroll-margin-top:100px}
+.course-image,.retreat-graphic{display:none}
+.course-card{border-top:3px solid var(--gold)}
+.practice-gallery{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;padding:8px 0 24px;margin:30px 0;}
+.practice-gallery figure{flex:0 0 340px;margin:0;scroll-snap-align:start}
+.practice-gallery img{aspect-ratio:4/3;object-fit:cover;filter:saturate(.85)}
+.practice-gallery figcaption{font-size:17px;padding:14px 0;color:var(--ink)}
+@media(max-width:650px){
+body{font-size:18px}
+.hero-description,.philosophy-content>p,.wisdom-pair p,.section-heading>p,.path-tile p,.recommend-heading p,.course-desc,.detail-body,.feature-copy p,.about-copy p,.booking-inner>div>p,.faq-item p{font-size:18px;line-height:1.8}
+.course-fit,.course-meta,.track-note,.catalog-help,.signature-row span:last-child,.booking-card small,.detail-body small{font-size:16px;line-height:1.75}
+.course-content h3{font-size:27px;line-height:1.45}
+.signature-row strong{font-size:20px}
+.btn,.text-link,.course-action,.course-details summary,.filter,.booking-card li{font-size:17px;line-height:1.6}
+.mobile-action-bar a{font-size:16px;min-height:58px;padding:14px 8px}
+.mobile-action-bar{padding-bottom:env(safe-area-inset-bottom)}
+.site-footer{padding-bottom:100px}
+.header-cta{font-size:14px;padding:9px}
+.brand{font-size:24px}.header-inner{gap:12px}
+.course-meta{flex-wrap:wrap}.course-price{white-space:normal;text-align:left;color:#806040}
+.course-content{padding:24px 20px}.course-desc{min-height:0}
+.recommend-panel{padding:12px}.course-grid{gap:24px}
+.signature-row>div{padding:22px 0;row-gap:8px}
+.practice-gallery figure{flex-basis:85%}
+}
