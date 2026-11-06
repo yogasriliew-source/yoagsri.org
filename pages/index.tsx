@@ -414,7 +414,7 @@ export default function Home() {
       </Head>
       <header className="site-header">
         <div className="shell header-inner">
-          <a href="#top" className="brand" aria-label="Yoga Sri 首页" onClick={() => setMenuOpen(false)}><span className="brand-symbol">✳</span>Yoga Sri<span className="brand-tail">CLASSICAL PRACTICE</span></a>
+          <a href="#top" className="brand" aria-label="Yoga Sri 首页" onClick={() => setMenuOpen(false)}><span className="brand-symbol">✳︎</span>Yoga Sri<span className="brand-tail">CLASSICAL PRACTICE</span></a>
           <nav className={"main-nav" + (menuOpen ? " open" : "")} aria-label="主导航">
             <a href="#find" onClick={() => setMenuOpen(false)}>三大学习路径</a>
             <a href="#philosophy" onClick={() => setMenuOpen(false)}>瑜伽 × 阿育吠陀</a>
@@ -506,6 +506,9 @@ export default function Home() {
             <div className="featured-layout">
               <div className="feature-image"><img src="/images/surya-shakti.jpg" alt="Surya Shakti 古典哈他瑜伽动作" loading="lazy" /><div className="feature-image-label">THE ART OF PRACTICE</div></div>
               <div className="feature-copy"><Kolam className="feature-kolam"/><div className="eyebrow">CLASSICAL HATHA YOGA</div><h3>让练习成为<br/>可以陪伴一生的基础。</h3><p>从温和的 Upa Yoga，到太阳系列、Yogasanas、Angamardana 与 Bhuta Shuddhi，每套练习都有不同的学习目的与准备要求。</p><a href="#catalog" className="btn btn-secondary" onClick={() => setLibraryOpen(true)}>浏览完整课程资料 <ArrowRight size={17}/></a></div>
+            </div>
+            <div className="practice-gallery" role="region" aria-label="练习照片相册，可左右滑动" tabIndex={0}>
+              {[["upa-yoga.jpg", "Upa Yoga"], ["surya-shakti.jpg", "Surya Shakti"], ["surya-kriya.jpg", "Surya Kriya"], ["yogasanas.jpg", "Yogasanas"], ["angamardana-standing.jpg", "Angamardana"]].map(([src, name]) => <figure key={src}><img src={"/images/" + src} alt={name + " 练习照片"} loading="lazy"/><figcaption>{name}</figcaption></figure>)}
             </div>
             <div className="signature-row"><div><span className="signature-num">01</span><strong>精确教学</strong><span>保留传统练习的完整步骤</span></div><div><span className="signature-num">02</span><strong>多语言指导</strong><span>中文 · English · 粤语</span></div><div><span className="signature-num">03</span><strong>持续练习</strong><span>从课程到个人日常修习</span></div></div>
             <div id="catalog" className="catalog-box">
