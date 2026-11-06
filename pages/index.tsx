@@ -360,10 +360,7 @@ function CourseCard({ course, badge = "", photo = true }: { course: Course; badg
   const image = getImage(course.title.split("｜")[0].trim());
   return (
     <article className="course-card">
-      {photo && <div className={"course-image" + (image ? "" : " no-photo")}>
-        {image ? <img src={image} alt={course.title + " 练习照片"} loading="lazy" /> : <Kolam className="course-pattern" />}
-        {badge && <span className="photo-badge">{badge}</span>}
-      </div>}
+      <div className="course-image"><span aria-hidden="true" className={"program-symbol " + (/Online/.test(course.title) ? "online" : /Nadi/.test(course.title) ? "nadi" : /Ayurveda|Reset/.test(course.title) ? "reset" : /Corporate/.test(course.title) ? "corporate" : /Private/.test(course.title) ? "private" : "hatha")} />{badge && <span className="photo-badge">{badge}</span>}</div>
       <div className="course-content">
         <div className="course-meta"><span>{course.duration}</span><span className="course-price">{course.price}</span></div>
         <h3>{course.title}</h3>
@@ -483,7 +480,7 @@ export default function Home() {
             </div>
             <div className={"course-grid recommend-grid" + (selected === "reset" ? " reset-grid" : "")}>
               {selected === "reset" && <article className="course-card retreat-product">
-                <div className="retreat-graphic"><Kolam /><span>RETREAT · WELLBEING</span></div>
+                <div className="retreat-graphic"><span className="program-symbol retreat" aria-hidden="true" /></div>
                 <div className="course-content">
                   <div className="course-meta"><span>沉浸式静修与学习</span><span className="course-price">当期咨询</span></div>
                   <h3>瑜伽 × 阿育吠陀静修营</h3>
