@@ -520,10 +520,37 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="section-pad about-section shell" id="about">
-          <div className="about-mark"><Kolam /></div>
-          <div className="about-copy"><div className="eyebrow">04 / MEET YOUR TEACHER</div><h2>一位老师，<em>一条持续学习的路。</em></h2><p>Yoga Sri 于 2017 年完成系统性的古典哈他瑜伽教师训练，自 2018 年持续全职教学，曾在马来西亚、台湾、中国、日本、印度及线上带领课程。</p><p>她重视清晰的指导、实际的身体感受与练习的长期建立，尤其希望让中文学员也能准确理解传统瑜伽的细节，而不只是跟着模仿动作。</p><div className="about-tags"><span>Malaysia based</span><span>Classical Hatha Yoga</span><span>Chinese · English · Cantonese</span></div></div>
-          <div className="about-image"><img src="/images/surya-shakti.jpg" loading="lazy" alt="经典哈他瑜伽练习照片"/></div>
+        <section className="section-pad about-section shell yoga-story" id="about" aria-labelledby="story-title">
+          <div className="about-copy">
+            <div className="eyebrow">04 / THE YOGA SRI STORY</div>
+            <h2 id="story-title">從尋找自由，<em>到學習如何照顧生命。</em></h2>
+            <p>我是 Yoga Sri，來自馬來西亞。</p>
+            <p>在成為瑜伽老師之前，我修讀心理學，也曾擔任卡內基訓練講師與績效顧問。那時的工作，是陪伴人們提升能力、突破限制。而在自己的生活裡，我也一直探索：<strong>我們如何活出潛力，同時保有內在的自在？</strong></p>
+            <p>這個提問，帶我走向瑜伽。</p>
+            <p>2017 年，我完成了超過 1,750 小時的 Isha 哈他瑜伽師資培訓，獲得了 Yoga Sri 這個名字。從 2018 年開始，我投入全職教學，在馬來西亞、台灣、中國、日本與印度等地，與不同背景的學員相遇。</p>
+            <details className="story-details">
+              <summary>閱讀完整故事 <ChevronDown size={18} aria-hidden="true" /></summary>
+              <div className="story-body">
+                <p>每一次教學，都讓我更關心一件事：課堂上的練習，如何真正走進一個人的生活？當工作忙碌、身體疲倦、心裡充滿牽掛時，我們是否仍有方法照顧自己？</p>
+                <h3>讓古老的智慧，回到日常</h3>
+                <p>哈他瑜伽給了我一條從身體開始、深入觀察自己的道路。隨著對阿育吠陀的學習與親身體驗，我也開始更細緻地理解飲食、作息、環境與個人狀態之間的關係。</p>
+                <p>這些探索逐漸成為 Yoga Sri 的教學方向：以古典哈他瑜伽為根基，結合阿育吠陀的生活觀點，並在需要時與專業醫師合作，陪伴學員找到適合自己的練習與養護節奏。</p>
+                <p>你可以從一堂入門課開始，也可以留一段時間，深入認識自己的身體。練習的深度，會在一次次真實的投入裡慢慢累積。</p>
+                <h3>自由，也包括好好照顧自己</h3>
+                <p>以前，我嚮往的自由，是去不同的地方，做喜歡的事，活出生命的可能。</p>
+                <p>走過多年的教學與探索，如今的我，也珍惜另一種自由：聽見自己的需要，尊重身體的節奏，清楚地做選擇，並為自己的生活承擔責任。</p>
+                <p>我仍在這條路上學習。作為老師，我願意分享親身實踐的工具，也尊重每個人不同的起點與步伐。</p>
+                <p>這是我想透過 Yoga Sri 帶給你的陪伴。</p>
+              </div>
+            </details>
+            <p className="story-closing"><strong>從此刻的自己開始，為健康與自在，留一點空間。</strong></p>
+            <a className="text-link" href="#find">探索適合你的課程 <ArrowRight size={17} aria-hidden="true" /></a>
+            <div className="about-tags"><span>Malaysia based</span><span>Classical Hatha Yoga</span><span>Chinese · English · Cantonese</span></div>
+          </div>
+          <div className="story-portrait">
+            <div className="about-image"><img src="/images/yoga-sri-portrait.jpeg" loading="lazy" alt="Yoga Sri，古典哈他瑜伽老師"/></div>
+            <p className="story-caption">YOGA SRI · ROOTED IN PRACTICE, OPEN TO LIFE</p>
+          </div>
         </section>
         <section className="booking-section section-pad" id="booking">
           <div className="shell booking-inner"><div><div className="eyebrow">05 / TAKE THE NEXT STEP</div><h2>准备好开始<br/><em>属于你的练习了吗？</em></h2><p>无需先填写复杂表单。告诉我们你感兴趣的课程，我们会通过 WhatsApp 回复可安排的班次、地点与报名步骤。</p></div><div className="booking-card"><div className="booking-label">报名流程 / HOW IT WORKS</div><ol><li><span>01</span>选择课程或学习方向</li><li><span>02</span>WhatsApp 确认班次与适合度</li><li><span>03</span>确认名额并完成报名</li></ol><a className="btn btn-cream" href={whatsapp(selectedPath.title)} target="_blank" rel="noreferrer"><MessageCircle size={19}/> WhatsApp 咨询我的课程 <ArrowUpRight size={18}/></a><small>将自动带入你当前选择的学习方向；不会要求在网页公开填写健康资料。</small></div></div>
@@ -542,6 +569,28 @@ export default function Home() {
         </section>
       </main>
       <footer className="site-footer"><div className="shell footer-grid"><div><div className="footer-logo"><Kolam/> <span>Yoga Sri</span></div><p>Classical practice for a more conscious life.</p></div><div><strong>Explore</strong><a href="#find">三大学习路径</a><a href="#featured">课程资料</a><a href="#about">关于老师</a></div><div><strong>Connect</strong><a href={whatsapp()} target="_blank" rel="noreferrer">WhatsApp: +60 12-672 5549</a><span>Kuala Lumpur · Petaling Jaya · Online</span></div></div><div className="shell footer-bottom"><span>© 2026 Yoga Sri. All rights reserved.</span><span>瑜伽与阿育吠陀教育内容不替代医疗建议。</span></div></footer>
+      <style jsx global>{`
+        .about-section.yoga-story{grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:clamp(28px,6vw,80px);align-items:start}
+        .yoga-story .about-copy{min-width:0}
+        .yoga-story .about-copy p{font-size:18px;line-height:1.9}
+        .yoga-story .about-copy h2{font-size:clamp(30px,3.2vw,44px);text-wrap:balance}
+        .yoga-story .about-copy strong{font-weight:600;color:var(--green)}
+        .yoga-story .story-portrait{min-width:0}
+        .yoga-story .about-image{min-height:0;max-height:none;aspect-ratio:4/5}
+        .yoga-story .about-image img{height:100%;object-fit:cover}
+        .yoga-story .story-caption{font-size:12px;line-height:1.7;letter-spacing:.08em;color:var(--muted);margin:16px 0}
+        .yoga-story .story-details{border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin:26px 0}
+        .yoga-story .story-details summary{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 0;cursor:pointer;list-style:none;font-size:18px;color:var(--green)}
+        .yoga-story .story-details summary::-webkit-details-marker{display:none}
+        .yoga-story .story-details summary:focus-visible{outline:2px solid var(--green);outline-offset:5px}
+        .yoga-story .story-details[open] summary svg{transform:rotate(180deg)}
+        .yoga-story .story-body{padding:8px 0}
+        .yoga-story .story-body h3{font-size:25px;line-height:1.5;margin:30px 0 16px;color:var(--green)}
+        .yoga-story .story-closing{margin-top:28px}
+        .yoga-story .text-link{font-size:17px}
+        .yoga-story .about-tags span{font-size:12px}
+        @media(max-width:650px){.about-section.yoga-story{grid-template-columns:1fr}.yoga-story .story-portrait{grid-row:1}.yoga-story .about-image{aspect-ratio:4/3}.yoga-story .about-image img{object-position:center 35%}}
+      `}</style>
       <div className="mobile-action-bar"><a href="#find">找到适合的课程 <ArrowRight size={16}/></a><a href={whatsapp(selectedPath.title)} target="_blank" rel="noreferrer"><MessageCircle size={17}/> 直接咨询</a></div>
     </>
   );
