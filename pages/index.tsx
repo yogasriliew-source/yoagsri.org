@@ -407,6 +407,11 @@ export default function Home() {
       <Head>
         <title>Yoga Sri | 古典哈他瑜伽 · 课程与预约</title>
         <meta name="description" content="Yoga Sri 在吉隆坡、八打灵再也及线上提供中文、英文、粤语古典哈他瑜伽课程。选择适合自己的练习方向，了解课程并通过 WhatsApp 咨询报名。" />
+        <link rel="canonical" href="https://www.yogasri.org/" />
+        <link rel="alternate" hrefLang="zh-Hans" href="https://www.yogasri.org/" />
+        <link rel="alternate" hrefLang="en" href="https://www.yogasri.org/en" />
+        <link rel="alternate" hrefLang="x-default" href="https://www.yogasri.org/" />
+        <meta property="og:locale" content="zh_CN" />
         <meta name="viewport" content="width=device-width,initial-scale=1" />
       </Head>
       <header className="site-header">
@@ -419,6 +424,7 @@ export default function Home() {
             <a href="#faq" onClick={() => setMenuOpen(false)}>常见问题</a>
             <a href={whatsapp()} className="nav-mobile-cta" target="_blank" rel="noreferrer">WhatsApp 咨询</a>
           </nav>
+          <div className="language-switch" role="group" aria-label="網站語言"><a href="/" lang="zh-Hans" hrefLang="zh-Hans" aria-current="page">中文</a><span aria-hidden="true">/</span><a href="/en" lang="en" hrefLang="en">EN</a></div>
           <a className="header-cta" href={whatsapp()} target="_blank" rel="noreferrer">咨询课程 <ArrowUpRight size={16} /></a>
           <button className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)} aria-label={menuOpen ? "关闭菜单" : "打开菜单"} aria-expanded={menuOpen}>{menuOpen ? <X /> : <Menu />}</button>
         </div>
