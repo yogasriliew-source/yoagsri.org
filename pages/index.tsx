@@ -433,12 +433,12 @@ export default function Home() {
         <section className="hero shell">
           <div className="hero-copy">
             <div className="eyebrow"><span className="eyebrow-line" /> FIVE ELEMENTS · CLASSICAL HATHA YOGA · AYURVEDA</div>
-            <h1>从身体开始，<br/><em>探索更完整的自己。</em></h1>
+            <h1>從五大元素，<br/><em>探索身心平衡。</em></h1>
             <p className="hero-lead">古典哈他瑜伽 · 阿育吠陀生活智慧</p>
-            <p className="hero-description">以五大元素的传统智慧为理念，将古典哈他瑜伽与阿育吠陀的实践融为一条探索之路。从初学、深入修习到生活养护，与你一起唤醒生命原有的活力。</p>
+            <p className="hero-description">透過古典哈他瑜伽與阿育吠陀的生活智慧，重新認識身體、練習與日常的連結。無論初次接觸，或希望深入修習，都能從適合自己的地方開始。</p>
             <div className="hero-actions">
-              <a className="btn btn-primary" href="#find">探索三大学习路径 <ArrowRight size={18}/></a>
-              <a className="text-link" href="#featured">浏览课程 <ArrowUpRight size={17}/></a>
+              <a className="btn btn-primary" href="#find">找到適合我的課程 <ArrowRight size={18}/></a>
+              <a className="text-link" href={whatsapp()} target="_blank" rel="noreferrer">與 Yoga Sri 聊聊 <ArrowUpRight size={17}/></a>
             </div>
             <div className="hero-proof"><span>2017 教师训练</span><i/><span>1750+ 小时系统学习</span><i/><span>中文 · English · 粤语</span></div>
           </div>
@@ -453,8 +453,8 @@ export default function Home() {
           <div className="philosophy-emblem"><Kolam/><span>ONE CONTINUOUS PATH</span></div>
           <div className="philosophy-content">
             <div className="eyebrow">01 / THE PHILOSOPHY</div>
-            <h2>古老的智慧，<em>回到生命健康的根源。</em></h2>
-            <p className="philosophy-lead">从古典哈他瑜伽与阿育吠陀出发，重新认识身体、生活与生命之间的联系。</p>
+            <h2>五大元素，<em>串起練習與生活。</em></h2>
+            <p className="philosophy-lead">古老的智慧，回到生命健康的根源。透過五大元素的觀點，將古典哈他瑜伽的身體與呼吸練習，連結阿育吠陀的飲食與作息智慧。</p>
             <p>两门源远流长的传统智慧，从不同角度关注生命：瑜伽透过身体、呼吸与内在练习，阿育吠陀则从体质、饮食、作息与自然节律理解日常养护。它们相互补充，指向更有觉察、可持续的生活方式。</p>
             <p>在古典瑜伽的理解中，生命不仅是物质身体，也包含头脑、情绪与更细微的能量层面。当我们开始关注这些层面之间的关系，便有机会更深入地认识自己。</p>
             <div className="wisdom-pair">
@@ -508,7 +508,7 @@ export default function Home() {
             </div>
             <div className="featured-layout">
               <div className="feature-image"><img src="/images/surya-shakti.jpg" alt="Surya Shakti 古典哈他瑜伽动作" loading="lazy" /><div className="feature-image-label">THE ART OF PRACTICE</div></div>
-              <div className="feature-copy"><Kolam className="feature-kolam"/><div className="eyebrow">CLASSICAL HATHA YOGA</div><h3>让练习成为<br/>可以陪伴一生的基础。</h3><p>从温和的 Upa Yoga，到太阳系列、Yogasanas、Angamardana 与 Bhuta Shuddhi，每套练习都有不同的学习目的与准备要求。</p><a href="#catalog" className="btn btn-secondary" onClick={() => setLibraryOpen(true)}>浏览完整课程资料 <ArrowRight size={17}/></a></div>
+              <div className="feature-copy"><Kolam className="feature-kolam"/><div className="eyebrow">CLASSICAL HATHA YOGA</div><h3>找到適合你的練習，<br/>一步步融入生活。</h3><p>从温和的 Upa Yoga，到太阳系列、Yogasanas、Angamardana 与 Bhuta Shuddhi，每套练习都有不同的学习目的与准备要求。</p><a href="#catalog" className="btn btn-secondary" onClick={() => setLibraryOpen(true)}>浏览完整课程资料 <ArrowRight size={17}/></a></div>
             </div>
             <div className="practice-gallery" role="region" aria-label="练习照片相册，可左右滑动" tabIndex={0}>
               {[["upa-yoga.jpg", "Upa Yoga"], ["surya-shakti.jpg", "Surya Shakti"], ["surya-kriya.jpg", "Surya Kriya"], ["yogasanas.jpg", "Yogasanas"], ["angamardana-standing.jpg", "Angamardana"]].map(([src, name]) => <figure key={src}><img src={"/images/" + src} alt={name + " 练习照片"} loading="lazy"/><figcaption>{name}</figcaption></figure>)}
@@ -529,7 +529,7 @@ export default function Home() {
         <section className="section-pad about-section shell yoga-story" id="about" aria-labelledby="story-title">
           <div className="about-copy">
             <div className="eyebrow">04 / THE YOGA SRI STORY</div>
-            <h2 id="story-title">從尋找自由，<em>到學習如何照顧生命。</em></h2>
+            <h2 id="story-title">從自己的探索，<em>到陪伴你的練習。</em></h2>
             <p>我是 Yoga Sri，來自馬來西亞。</p>
             <p>在成為瑜伽老師之前，我修讀心理學，也曾擔任卡內基訓練講師與績效顧問。那時的工作，是陪伴人們提升能力、突破限制。而在自己的生活裡，我也一直探索：<strong>我們如何活出潛力，同時保有內在的自在？</strong></p>
             <p>這個提問，帶我走向瑜伽。</p>

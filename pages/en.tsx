@@ -430,12 +430,12 @@ export default function Home() {
         <section className="hero shell">
           <div className="hero-copy">
             <div className="eyebrow"><span className="eyebrow-line" /> FIVE ELEMENTS · CLASSICAL HATHA YOGA · AYURVEDA</div>
-            <h1>Begin with the body.<br/><em>Discover more of yourself.</em></h1>
+            <h1>Explore the five elements.<br/><em>Find your path to balance.</em></h1>
             <p className="hero-lead">Classical Hatha Yoga · Ayurvedic Living</p>
-            <p className="hero-description">Rooted in the traditional wisdom of the five elements, classical Hatha Yoga and Ayurveda come together as a path of exploration. From your first class to deeper practice and daily self-care, reconnect with your natural vitality.</p>
+            <p className="hero-description">Discover the connection between body, practice and daily life through classical Hatha Yoga and Ayurvedic wisdom. Whether you are new to yoga or deepening your practice, find a place to begin that suits you.</p>
             <div className="hero-actions">
-              <a className="btn btn-primary" href="#find">Explore the Three Pathways <ArrowRight size={18}/></a>
-              <a className="text-link" href="#featured">Explore Courses <ArrowUpRight size={17}/></a>
+              <a className="btn btn-primary" href="#find">Find my starting point <ArrowRight size={18}/></a>
+              <a className="text-link" href={whatsapp()} target="_blank" rel="noreferrer">Talk to Yoga Sri <ArrowUpRight size={17}/></a>
             </div>
             <div className="hero-proof"><span>Teacher training in 2017</span><i/><span>1,750+ hours of training</span><i/><span>Chinese · English · Cantonese</span></div>
           </div>
@@ -450,8 +450,8 @@ export default function Home() {
           <div className="philosophy-emblem"><Kolam/><span>ONE CONTINUOUS PATH</span></div>
           <div className="philosophy-content">
             <div className="eyebrow">01 / THE PHILOSOPHY</div>
-            <h2>Ancient wisdom.<em>Return to the roots of wellbeing.</em></h2>
-            <p className="philosophy-lead">Explore the connection between your body, daily living and life through classical Hatha Yoga and Ayurveda.</p>
+            <h2>Five elements.<em>Connecting practice and daily life.</em></h2>
+            <p className="philosophy-lead">Ancient wisdom brings us back to the roots of wellbeing. Through the five elements, classical Hatha Yoga connects body and breath with Ayurvedic approaches to food and daily routines.</p>
             <p>Two longstanding traditions approach life from different perspectives. Yoga works with the body, breath and inner practice; Ayurveda considers constitution, food, routine and natural rhythms. Together, they offer ways to cultivate more conscious, sustainable living.</p>
             <p>In the classical yogic understanding, life encompasses the physical body, mind, emotions and subtler dimensions of energy. Exploring their relationship offers a way to understand ourselves more deeply.</p>
             <div className="wisdom-pair">
@@ -505,7 +505,7 @@ export default function Home() {
             </div>
             <div className="featured-layout">
               <div className="feature-image"><img src="/images/surya-shakti.jpg" alt="Surya Shakti classical Hatha Yoga practice" loading="lazy" /><div className="feature-image-label">THE ART OF PRACTICE</div></div>
-              <div className="feature-copy"><Kolam className="feature-kolam"/><div className="eyebrow">CLASSICAL HATHA YOGA</div><h3>Let practice become<br/>a foundation for life.</h3><p>From gentle Upa Yoga to the solar practices, Yogasanas, Angamardana and Bhuta Shuddhi, each practice has its own learning purpose and preparation.</p><a href="#catalog" className="btn btn-secondary" onClick={() => setLibraryOpen(true)}>Explore the Full Course Library <ArrowRight size={17}/></a></div>
+              <div className="feature-copy"><Kolam className="feature-kolam"/><div className="eyebrow">CLASSICAL HATHA YOGA</div><h3>Find a practice that fits you.<br/>Make it part of your life.</h3><p>From gentle Upa Yoga to the solar practices, Yogasanas, Angamardana and Bhuta Shuddhi, each practice has its own learning purpose and preparation.</p><a href="#catalog" className="btn btn-secondary" onClick={() => setLibraryOpen(true)}>Explore the Full Course Library <ArrowRight size={17}/></a></div>
             </div>
             <div className="practice-gallery" role="region" aria-label="Practice photo gallery; scroll horizontally" tabIndex={0}>
               {[["upa-yoga.jpg", "Upa Yoga"], ["surya-shakti.jpg", "Surya Shakti"], ["surya-kriya.jpg", "Surya Kriya"], ["yogasanas.jpg", "Yogasanas"], ["angamardana-standing.jpg", "Angamardana"]].map(([src, name]) => <figure key={src}><img src={"/images/" + src} alt={name + " practice photo"} loading="lazy"/><figcaption>{name}</figcaption></figure>)}
@@ -526,7 +526,7 @@ export default function Home() {
         <section className="section-pad about-section shell yoga-story" id="about" aria-labelledby="story-title">
           <div className="about-copy">
             <div className="eyebrow">04 / THE YOGA SRI STORY</div>
-            <h2 id="story-title">From seeking freedom<em>to learning to care for life.</em></h2>
+            <h2 id="story-title">My journey of discovery.<em>Your path of practice.</em></h2>
             <p>I am Yoga Sri, from Malaysia.</p>
             <p>Before becoming a yoga teacher, I studied psychology and worked as a Carnegie trainer and performance consultant. My work was about helping people develop their abilities and move beyond limitations. In my own life, I kept exploring a question: <strong>How can we live our potential while remaining at ease within ourselves?</strong></p>
             <p>That question led me to yoga.</p>
