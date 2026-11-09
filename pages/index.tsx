@@ -1,3 +1,4 @@
+import { registrationLink } from "../lib/registration";
 import Head from "next/head";
 import React, { useState } from "react";
 import { ArrowRight, ArrowUpRight, Check, ChevronDown, Menu, MessageCircle, X } from "lucide-react";
@@ -377,8 +378,8 @@ function CourseCard({ course, badge = "", photo = true }: { course: Course; badg
             <small>课程内容不代表医疗诊断或治疗效果；特殊健康情况请先向专业医师及老师确认。</small>
           </div>
         </details>
-        <a href={whatsapp(course.title)} target="_blank" rel="noreferrer" className="course-action" aria-label={"询问 " + course.title + " 的班次"}>
-          询问此课程的班次 <ArrowUpRight size={18} aria-hidden="true"/>
+        <a href={registrationLink(course.title, "zh")} className="course-action" aria-label={"申请报名 " + course.title}>
+          申请报名 <ArrowUpRight size={18} aria-hidden="true"/>
         </a>
       </div>
     </article>
@@ -559,7 +560,7 @@ export default function Home() {
           </div>
         </section>
         <section className="booking-section section-pad" id="booking">
-          <div className="shell booking-inner"><div><div className="eyebrow">05 / TAKE THE NEXT STEP</div><h2>准备好开始<br/><em>属于你的练习了吗？</em></h2><p>无需先填写复杂表单。告诉我们你感兴趣的课程，我们会通过 WhatsApp 回复可安排的班次、地点与报名步骤。</p></div><div className="booking-card"><div className="booking-label">报名流程 / HOW IT WORKS</div><ol><li><span>01</span>选择课程或学习方向</li><li><span>02</span>WhatsApp 确认班次与适合度</li><li><span>03</span>确认名额并完成报名</li></ol><a className="btn btn-cream" href={whatsapp(selectedPath.title)} target="_blank" rel="noreferrer"><MessageCircle size={19}/> WhatsApp 咨询我的课程 <ArrowUpRight size={18}/></a><small>将自动带入你当前选择的学习方向；不会要求在网页公开填写健康资料。</small></div></div>
+          <div className="shell booking-inner"><div><div className="eyebrow">05 / TAKE THE NEXT STEP</div><h2>准备好开始<br/><em>属于你的练习了吗？</em></h2><p>在线提交报名申请，我们会通过 Email 联系你，确认可安排的班次、费用与适合度。</p></div><div className="booking-card"><div className="booking-label">报名流程 / HOW IT WORKS</div><ol><li><span>01</span>选择课程，填写报名申请</li><li><span>02</span>Email 确认班次与费用</li><li><span>03</span>确认名额后，再完成付款</li></ol><a className="btn btn-cream" href="/register">在线申请报名 <ArrowUpRight size={18}/></a><small>报名申请须经确认；现阶段不收取付款。</small></div></div>
         </section>
         <section className="section-pad faq-section shell" id="faq">
           <div className="section-heading split-heading"><div><div className="eyebrow">06 / BEFORE YOU BEGIN</div><h2>你可能还想知道</h2></div><p>从第一次上课到私人课程，我们先回答最常被问到的问题。</p></div>
