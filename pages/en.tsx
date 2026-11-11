@@ -551,8 +551,12 @@ export default function Home() {
             <div className="about-tags"><span>Malaysia based</span><span>Classical Hatha Yoga</span><span>Chinese · English · Cantonese</span></div>
           </div>
           <div className="story-portrait">
-            <div className="about-image"><img src="/images/yoga-sri-portrait.jpeg" loading="lazy" alt="Yoga Sri, classical Hatha Yoga teacher"/></div>
-            <p className="story-caption">YOGA SRI · ROOTED IN PRACTICE, OPEN TO LIFE</p>
+            <div className="about-image"><img src="/images/yogasri-story-main.webp" loading="lazy" decoding="async" width="900" height="1125" alt="Yoga Sri smiling in a relaxed, everyday moment" /></div>
+            <div className="story-photo-strip" aria-label="Moments from Yoga Sri's everyday life">
+              <img src="/images/yogasri-story-life-01.webp" loading="lazy" decoding="async" width="660" height="825" alt="Yoga Sri sitting comfortably and smiling" />
+              <img src="/images/yogasri-story-life-02.webp" loading="lazy" decoding="async" width="660" height="825" alt="Yoga Sri in a light-hearted, relaxed pose" />
+            </div>
+            <p className="story-caption">BEYOND THE MAT · ROOTED IN PRACTICE, OPEN TO LIFE</p>
           </div>
         </section>
         <section className="booking-section section-pad" id="booking">
@@ -584,9 +588,12 @@ export default function Home() {
         .yoga-story .about-copy h2{font-size:clamp(30px,3.2vw,44px);text-wrap:balance}
         .yoga-story .about-copy strong{font-weight:600;color:var(--green)}
         .yoga-story .story-portrait{min-width:0}
-        .yoga-story .about-image{min-height:0;max-height:none;aspect-ratio:4/5}
-        .yoga-story .about-image img{height:100%;object-fit:cover}
-        .yoga-story .story-caption{font-size:12px;line-height:1.7;letter-spacing:.08em;color:var(--muted);margin:16px 0}
+        .yoga-story .about-image{min-height:0;max-height:none;aspect-ratio:4/5;background:#e7dfd2;overflow:hidden}
+        .yoga-story .about-image img{height:100%;width:100%;object-fit:cover;object-position:center 45%;filter:saturate(.96)}
+        .yoga-story .story-photo-strip{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:12px}
+        .yoga-story .story-photo-strip img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;filter:saturate(.96);background:#e7dfd2}
+        .yoga-story .story-photo-strip img:first-child{object-position:center 43%}
+        .yoga-story .story-caption{font-size:12px;line-height:1.7;letter-spacing:.06em;color:#8c3d32;margin:16px 0}
         .yoga-story .story-details{border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin:26px 0}
         .yoga-story .story-details summary{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 0;cursor:pointer;list-style:none;font-size:18px;color:var(--green)}
         .yoga-story .story-details summary::-webkit-details-marker{display:none}
@@ -597,7 +604,7 @@ export default function Home() {
         .yoga-story .story-closing{margin-top:28px}
         .yoga-story .text-link{font-size:17px}
         .yoga-story .about-tags span{font-size:12px}
-        @media(max-width:650px){.about-section.yoga-story{grid-template-columns:1fr}.yoga-story .story-portrait{grid-row:1}.yoga-story .about-image{aspect-ratio:4/3}.yoga-story .about-image img{object-position:center 35%}}
+        @media(max-width:650px){.about-section.yoga-story{grid-template-columns:1fr}.yoga-story .story-portrait{grid-row:1}.yoga-story .about-image{aspect-ratio:5/4}.yoga-story .about-image img{object-position:center 36%}.yoga-story .story-photo-strip{gap:9px;margin-top:9px}.yoga-story .story-photo-strip img{aspect-ratio:4/5}}
       `}</style>
       <div className="mobile-action-bar"><a href="#find">Find Your Course <ArrowRight size={16}/></a><a href={whatsapp(selectedPath.title)} target="_blank" rel="noreferrer"><MessageCircle size={17}/> Enquire Now</a></div>
     </>
