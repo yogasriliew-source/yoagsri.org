@@ -1,0 +1,18 @@
+const fs=require('node:fs'),vm=require('node:vm'),assert=require('node:assert/strict'),ts=require('typescript');
+const state={rows:[],flushes:0,locked:false};
+const headers=['申請編號','提交時間（馬來西亞）','姓名','Email','電話','課程','地點偏好','學習經驗','偏好日期或時段','語言','報名狀態','付款狀態','跟進備註','已同意資料使用','同意條款版本'];
+const sheet={getLastRow:()=>state.rows.length+1,getMaxRows:()=>1000,getRange:(r,c,n=1)=>({getValues:()=>r===1?[headers]:state.rows.slice(r-2,r-2+n),setNumberFormat(){return this},setValues(v){state.rows.push(...v);return this}})};
+const context={Date,ContentService:{MimeType:{JSON:'json'},createTextOutput:s=>({setMimeType:()=>JSON.parse(s)})},PropertiesService:{getScriptProperties:()=>({getProperty:k=>k==='REGISTRATION_TOKEN'?'t'.repeat(40):'sheet-id'})},LockService:{getScriptLock:()=>({tryLock:()=>{state.locked=true;return true},hasLock:()=>state.locked,releaseLock:()=>{state.locked=false}})},SpreadsheetApp:{openById:()=>({getSheetByName:()=>sheet}),flush:()=>state.flushes++}};
+vm.createContext(context);vm.runInContext(fs.readFileSync('integrations/google-sheets/Code.gs','utf8'),context);
+const data={name:'=IMPORTXML("https://example.com")',email:'test@example.com',phone:'+60123456789',course:'surya-kriya',preference:'',consent:true,language:'zh',experience:'new',location:'kl-pj',privacyVersion:'2026-11-09',requestId:'12345678-1234-1234-1234-123456789012'};
+const send=(d=data,token='t'.repeat(40))=>context.doPost({postData:{contents:JSON.stringify({token,registration:d})}});
+assert.equal(send(data,'wrong').error,'forbidden');assert.equal(state.rows.length,0);
+assert.equal(send({...data,course:'made-up'}).error,'invalid_input');
+assert.equal(send().persisted,true);assert.equal(state.rows.length,1);assert.equal(state.flushes,1);assert.equal(state.locked,false);
+assert.ok(state.rows[0][2].startsWith("'="));assert.ok(state.rows[0][4].startsWith("'+"));
+assert.equal(send().persisted,true);assert.equal(state.rows.length,1);
+for(let i=3;i<=6;i++)assert.equal(send({...data,requestId:`12345678-1234-1234-1234-12345678901${i}`}).persisted,true);
+assert.equal(send({...data,requestId:'12345678-1234-1234-1234-123456789017'}).error,'rate_limited');assert.equal(state.rows.length,5);
+const moduleContext={exports:{},URL,AbortSignal,fetch:async(url,opts)=>{if(opts.method==='POST'){assert.equal(JSON.parse(opts.body).token,'secret');assert.equal(opts.headers.Authorization,undefined);return{status:302,headers:{get:()=> 'https://script.googleusercontent.com/macros/echo?receipt=1'}}}assert.equal(opts.method,'GET');assert.equal(opts.body,undefined);assert.equal(opts.headers,undefined);return{ok:true,json:async()=>({persisted:true})}}};
+vm.runInNewContext(ts.transpileModule(fs.readFileSync('lib/registration-delivery.ts','utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2020}}).outputText,moduleContext);
+(async()=>{assert.equal((await moduleContext.exports.deliverRegistration('https://script.google.com/macros/s/test/exec','secret',data)).persisted,true);moduleContext.fetch=async()=>({status:302,headers:{get:()=> 'https://evil.example/steal'}});await assert.rejects(()=>moduleContext.exports.deliverRegistration('https://script.google.com/macros/s/test/exec','secret',data));console.log('Passed: receiver auth, validation, persisted write, duplicate retry, literal text, persistent rate limit, safe Google redirect.');})().catch(e=>{console.error(e);process.exitCode=1});

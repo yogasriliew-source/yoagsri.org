@@ -1,4 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+import { deliverRegistration } from '../../lib/registration-delivery';
 import { validateRegistration } from '../../lib/registration';
 export const config = { api: { bodyParser: { sizeLimit: '8kb' } } };
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -13,13 +14,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (!data) return res.status(400).json({ error: 'invalid_input' });
   if (!endpoint?.startsWith('https://') || !token) return res.status(503).json({ error: 'not_configured' });
   try {
-    const upstream = await fetch(endpoint, {
-      method: 'POST', redirect: 'error', signal: AbortSignal.timeout(10000),
-      headers: { 'Content-Type': 'application/json', Authorization: 'Bearer ' + token, 'Idempotency-Key': data.requestId },
-      body: JSON.stringify({ ...data, status: 'pending_review', submittedAt: new Date().toISOString() }),
-    });
-    if (!upstream.ok) throw new Error('upstream');
-    const result = await upstream.json();
+    const result = await deliverRegistration(endpoint, token, { ...data, status: 'pending_review', submittedAt: new Date().toISOString() });
     // The receiver must acknowledge a durable write, not merely receipt of HTTP traffic.
     if (result.persisted !== true || result.requestId !== data.requestId) throw new Error('unconfirmed');
     return res.status(200).json({ reference: data.requestId, status: 'pending_review' });

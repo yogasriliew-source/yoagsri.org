@@ -4,11 +4,12 @@ const vm = require('node:vm');
 const assert = require('node:assert/strict');
 function load(file, imports = {}) {
   const output = ts.transpileModule(fs.readFileSync(file, 'utf8'), { compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2020 } }).outputText;
-  const context = { exports: {}, require: key => imports[key], process, fetch: (...args) => global.fetch(...args), AbortSignal };
+  const context = { exports: {}, require: key => imports[key], process, URL, fetch: (...args) => global.fetch(...args), AbortSignal };
   vm.runInNewContext(output, context); return context.exports;
 }
 const lib = load('lib/registration.ts');
-const handler = load('pages/api/registration.ts', { '../../lib/registration': lib }).default;
+const delivery = load('lib/registration-delivery.ts');
+const handler = load('pages/api/registration.ts', { '../../lib/registration': lib, '../../lib/registration-delivery': delivery }).default;
 const body = { name:'Test Student', email:'test@example.com', phone:'+60123456789', course:'surya-kriya', preference:'', consent:true, language:'zh', experience:'new', location:'kl-pj', requestId:'12345678-1234-1234-1234-123456789012', website:'' };
 async function call(overrides={}) {
   const req = { method:'POST', headers:{origin:'https://www.yogasri.org','content-type':'application/json'},body,...overrides };
