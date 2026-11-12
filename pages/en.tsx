@@ -1,3 +1,4 @@
+import { registrationLink } from "../lib/registration";
 import Head from "next/head";
 import React, { useState } from "react";
 import { ArrowRight, ArrowUpRight, Check, ChevronDown, Menu, MessageCircle, X } from "lucide-react";
@@ -374,8 +375,8 @@ function CourseCard({ course, badge = "", photo = true }: { course: Course; badg
             <small>Course content does not constitute medical diagnosis or a promise of treatment results. Discuss special health circumstances with a qualified physician and your teacher.</small>
           </div>
         </details>
-        <a href={whatsapp(course.title)} target="_blank" rel="noreferrer" className="course-action" aria-label={"Ask about " + course.title + "  classes"}>
-          Ask About This Course <ArrowUpRight size={18} aria-hidden="true"/>
+        <a href={registrationLink(course.title, "en")} className="course-action" aria-label={"Apply for " + course.title}>
+          Apply for This Course <ArrowUpRight size={18} aria-hidden="true"/>
         </a>
       </div>
     </article>
@@ -560,7 +561,7 @@ export default function Home() {
           </div>
         </section>
         <section className="booking-section section-pad" id="booking">
-          <div className="shell booking-inner"><div><div className="eyebrow">05 / TAKE THE NEXT STEP</div><h2>Ready to begin<br/><em>your own practice?</em></h2><p>Tell us which course interests you. We will reply on WhatsApp with available classes, locations and registration steps.</p></div><div className="booking-card"><div className="booking-label">HOW IT WORKS</div><ol><li><span>01</span>Choose a course or pathway</li><li><span>02</span>Confirm classes and suitability on WhatsApp</li><li><span>03</span>Confirm your place and register</li></ol><a className="btn btn-cream" href={whatsapp(selectedPath.title)} target="_blank" rel="noreferrer"><MessageCircle size={19}/> Ask About My Course <ArrowUpRight size={18}/></a><small>Your selected pathway will be included in the message. You will not be asked to share health information publicly on the website.</small></div></div>
+          <div className="shell booking-inner"><div><div className="eyebrow">05 / TAKE THE NEXT STEP</div><h2>Ready to begin<br/><em>your own practice?</em></h2><p>Apply online. We will contact you by email to confirm available dates, fees and suitability.</p></div><div className="booking-card"><div className="booking-label">HOW IT WORKS</div><ol><li><span>01</span>Choose a course and apply</li><li><span>02</span>Confirm dates and fees by email</li><li><span>03</span>Confirm your place, then pay</li></ol><a className="btn btn-cream" href="/register?lang=en">Apply Online <ArrowUpRight size={18}/></a><small>Applications require confirmation. No payment is collected at this stage.</small></div></div>
         </section>
         <section className="section-pad faq-section shell" id="faq">
           <div className="section-heading split-heading"><div><div className="eyebrow">06 / BEFORE YOU BEGIN</div><h2>You may also be wondering</h2></div><p>From your first class to private lessons, here are answers to common questions.</p></div>
